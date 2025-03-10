@@ -36,12 +36,6 @@
               <h2 class="text-h5 font-weight-bold">Get started</h2>
             </template>
 
-            <template #subtitle>
-              <div class="text-subtitle-1">
-                Replace this page by removing <v-kbd>{{ `<HelloWorld />` }}</v-kbd> in <v-kbd>pages/index.vue</v-kbd>.
-              </div>
-            </template>
-
             <v-overlay
               opacity=".12"
               scrim="primary"

@@ -53,9 +53,6 @@ export default defineConfig({
       },
     }),
   ],
-  build: {
-    outDir: 'public', // Defina o diretório de saída
-  },
   define: { 'process.env': {} },
   resolve: {
     alias: {

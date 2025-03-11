@@ -8,3 +8,8 @@
 // @use 'vuetify/settings' with (
 //   $color-pack: false
 // );
+
+@import "theme/_custom";
+@import "theme/default";
+
+/*@import "theme/_variables";*/

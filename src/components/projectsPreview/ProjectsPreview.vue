@@ -1,10 +1,11 @@
 <script setup>
+import previewMenu from "@/assets/previewImages/PreviewMenuRestaurant.png";
 
 const jsonProjects = [
   {
     id: 1,
-    title: "Projeto em Desenvolvimento 1",
-    src: "https://img.freepik.com/fotos-gratis/em-breve-palavra-em-estilo-de-texto-metalico_53876-124845.jpg?t=st=1741733119~exp=1741736719~hmac=78c8e6c6c57830f43700c78bf3d29b8ee4f7d060a5fdcfc11c3d946ad4ea0f5f&w=996",
+    title: "Menu de Restaurante",
+    src: previewMenu,
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ex explicabo fuga natus nostrum officia.",
   },
   {

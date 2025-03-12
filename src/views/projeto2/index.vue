@@ -1,12 +1,31 @@
 <script setup>
 
-import LeftSideBar from "@/layouts/leftSideBar/leftSideBar.vue";
+
+import Maintenance from "@/views/maintenance/Maintenance.vue";
+
+const breadcrumb = [
+  {
+    title: 'Projetos',
+    disabled: true,
+  },
+  {
+    title: 'Em Desenvolvimento',
+    disabled: false,
+  },
+];
 </script>
 
 <template>
-  <!--  <LeftSideBar />-->
 
-  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PROJETO 2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  <v-breadcrumbs title="Home" :items="breadcrumb"></v-breadcrumbs>
+
+  <v-card>
+    <v-card-title class="text-start">
+      Em Desenvolvimento
+    </v-card-title>
+  </v-card>
+
+  <Maintenance />
 
 </template>
 

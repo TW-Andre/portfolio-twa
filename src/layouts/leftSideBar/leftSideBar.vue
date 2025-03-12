@@ -14,16 +14,13 @@ let drawer = ref(true);
       image="https://img.freepik.com/fotos-gratis/fundo-hexadecimal-para-redes_52683-137877.jpg?t=st=1741788750~exp=1741792350~hmac=6ce1637034d09e28034165e892dae1b55197f18d41991be60ec75b9691d5b5e9&w=740"
       :rail="rail"
       permanent
-      @click="rail = false"
     >
       <v-list-item
-        class="cursor-pointer py-4"
+        class="py-4"
         prepend-icon="mdi-account"
         title="André dos Santos"
         nav
-      >
-
-      </v-list-item>
+      ></v-list-item>
 
       <v-divider></v-divider>
 
@@ -35,7 +32,7 @@ let drawer = ref(true);
           <v-list-item prepend-icon="mdi-silverware" title="Menu de Restaurante" value="restaurantmenu"></v-list-item>
         </RouterLink>
         <RouterLink to="/projeto2" style="text-decoration: none">
-          <v-list-item prepend-icon="mdi-file-document-check-outline" title="Projeto 2" value="projeto2"></v-list-item>
+          <v-list-item prepend-icon="mdi-wrench-clock" title="Projeto 2" value="projeto2"></v-list-item>
         </RouterLink>
       </v-list>
     </v-navigation-drawer>

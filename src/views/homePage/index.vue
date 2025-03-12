@@ -1,18 +1,9 @@
 <script setup>
 import ProjectsPreview from "@/components/projectsPreview/ProjectsPreview.vue";
 
-/*const breadcrumb = [
-  {
-    title: 'Dashboard',
-    disabled: true,
-  },
-];*/
-
 </script>
 
 <template>
-
-  <!--  <v-breadcrumbs title="Home" :items="breadcrumb"></v-breadcrumbs>-->
 
   <v-card>
     <v-card-title class="text-center">

@@ -1,5 +1,5 @@
 <script setup>
-import RestaurantMenu from "@/views/projeto1/parts/RestaurantMenu.vue";
+import RestaurantMenu from "@/views/restaurantMenu/parts/RestaurantMenu.vue"
 
 const breadcrumb = [
   {

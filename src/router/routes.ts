@@ -4,12 +4,12 @@ const projetos = [
   {
     path: '/',
     name: 'Home',
-    component: () => import("@/views/dashboard/index.vue")
+    component: () => import("@/views/homePage/index.vue")
   },
   {
-    path: '/projeto1',
-    name: 'Projeto 1',
-    component: () => import("@/views/projeto1/index.vue")
+    path: '/menurestaurante',
+    name: 'RestaurantMenu',
+    component: () => import("@/views/restaurantMenu/index.vue")
   },
   {
     path: '/projeto2',

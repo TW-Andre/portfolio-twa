@@ -1,8 +1,9 @@
 <script setup>
 import {RouterLink} from "vue-router";
+import { userStore } from "@/stores/authStore";
 
 let {rail} = defineProps(['rail'])
-
+let user   = userStore();
 let drawer = ref(true);
 
 </script>
@@ -18,13 +19,13 @@ let drawer = ref(true);
       <v-list-item
         class="py-4"
         prepend-icon="mdi-account"
-        title="André dos Santos"
+        :title="user.getUser()"
         nav
       ></v-list-item>
 
       <v-divider></v-divider>
 
-      <v-list density="compact" nav>
+      <v-list class="side-bar" density="compact" nav>
         <RouterLink to="/" style="text-decoration: none">
           <v-list-item prepend-icon="mdi-home" title="Home" value="home"></v-list-item>
         </RouterLink>
@@ -33,6 +34,9 @@ let drawer = ref(true);
         </RouterLink>
         <RouterLink to="/projeto2" style="text-decoration: none">
           <v-list-item prepend-icon="mdi-wrench-clock" title="Projeto 2" value="projeto2"></v-list-item>
+        </RouterLink>
+        <RouterLink to="/login" style="text-decoration: none">
+          <v-list-item prepend-icon="mdi-login" title="Login" value="login"></v-list-item>
         </RouterLink>
       </v-list>
     </v-navigation-drawer>
@@ -45,6 +49,6 @@ let drawer = ref(true);
 
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>

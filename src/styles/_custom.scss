@@ -1,0 +1,34 @@
+* {
+  /*color: #3aadad;*/
+}
+
+/*#layout-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+}*/
+.page-wrapper {
+  min-height: 100vh;
+}
+.main-container {
+  max-width: 95%;
+}
+.card-hover {
+  overflow: hidden;
+}
+.card-hover .v-img {
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.card-hover .v-img:hover {
+  transform: scale(1.1);
+}
+.card-menus {
+  transition: all 1s;
+}
+.side-bar .v-list-item {
+  color: #353b3f;
+}
+.side-bar .mdi {
+  color: #001b89;
+}

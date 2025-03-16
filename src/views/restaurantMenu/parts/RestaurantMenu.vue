@@ -1,4 +1,8 @@
 <script setup>
+import cerealImg from "@/assets/restaurantMenuImages/Cereal.jpg";
+import orangeJuice from "@/assets/restaurantMenuImages/OrangeJuice.jpg";
+import carneBovina from "@/assets/restaurantMenuImages/CarneBovina.jpg";
+import hamburguer from "@/assets/restaurantMenuImages/Hamburguer.jpg";
 
 let isLoading        = ref(false);
 let categorySelected = ref("all");
@@ -40,7 +44,7 @@ const fetchPage = async ()=>{
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
         price: 35.00,
         category: ["all", "meal"],
-        src: "https://img.freepik.com/fotos-gratis/vista-lateral-da-carne-de-bovino-grelhada-servida-com-legumes-grelhados-cogumelos-e-molho-em-uma-placa-de-madeira_141793-3032.jpg?t=st=1741786336~exp=1741789936~hmac=eada545e70520fe347fbaf8ab90f233e9b0a20f7cc36e01e5e34a0f5d11ebce8&w=740"
+        src: carneBovina,
       },
       {
         id: 5,
@@ -48,7 +52,7 @@ const fetchPage = async ()=>{
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
         price: 15.00,
         category: ["all", "meal"],
-        src: "https://img.freepik.com/fotos-gratis/vista-de-uma-refeicao-deliciosa-pronta-para-comer_23-2151431747.jpg?t=st=1741787952~exp=1741791552~hmac=4ddedf62cdf11f7a0d73ba401aac9e9dec3b5beaf2cc96e540eda23af062fe87&w=996"
+        src: hamburguer,
       },
       {
         id: 6,
@@ -64,7 +68,7 @@ const fetchPage = async ()=>{
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
         price: 5.00,
         category: ["all", "drink"],
-        src: "http://img.freepik.com/fotos-gratis/suco-de-laranja-colorido-em-vidro_23-2148226010.jpg?t=st=1741788491~exp=1741792091~hmac=52433177923e8d6dc302fbe1e933a77b10081524928e975d4bdbd91427da7ca2&w=740"
+        src: orangeJuice,
       },
       {
         id: 8,
@@ -72,7 +76,7 @@ const fetchPage = async ()=>{
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
         price: 7.00,
         category: ["all", "breakfast"],
-        src: "https://img.freepik.com/fotos-gratis/pequeno-almoco-saudavel-muesli-de-grao-inteiro-em-uma-tigela-branca_2829-19917.jpg?t=st=1741809547~exp=1741813147~hmac=d5887f6a2aaea28c12d56a40dc4fdf0b2feea1b25d6f9317c203144a2b002e6b&w=826"
+        src: cerealImg,
       },
     ];
 

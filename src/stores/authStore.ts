@@ -1,9 +1,12 @@
 import {defineStore} from "pinia";
-/*import LocalStorage from "@/app/localStorage";*/
+import LocalStorage from "@/app/localStorage";
+import router from "@/router";
+
+const userLocalStorage = new LocalStorage('authUser');
 
 export const userStore = defineStore('auth',{
   state: () => ({
-    user: ''
+    user: userLocalStorage.getItems().user
   }),
     actions: {
       async login(userName: string) {
@@ -11,14 +14,30 @@ export const userStore = defineStore('auth',{
 
           this.user = userName;
 
-          /*LocalStorage.setItems({
-            user: userName
-          });*/
+          userLocalStorage.setItems({ user: userName});
+
+          await router.push('/');
 
         } catch (error) {
-          console.log(error.data);
+          console.log(error);
         }
       },
+      async logout() {
+        try{
+
+          userLocalStorage.removeItem();
+
+        } catch (error) {
+            console.log(error);
+        } finally {
+            this.user = null;
+            userLocalStorage.removeItem();
+            localStorage.clear();
+            await router.push('/login');
+        }
+      },
+      // AGORA PRECISA CRIAR O LOGOUT
+
       setUser: ()=> {
 
       },
@@ -28,11 +47,3 @@ export const userStore = defineStore('auth',{
   },
 
 })
-
-/*
-    user: LocalStorage.getItems().user,
-    logo_url: LocalStorage.getItems().logo_url,
-    token: LocalStorage.getItems().token,
-    permissions: LocalStorage.getItems().permissions,
-    returnUrl: null
- */

@@ -20,6 +20,7 @@ let drawer = ref(true);
         class="py-4"
         prepend-icon="mdi-account"
         :title="user.getUser()"
+		slim
         nav
       ></v-list-item>
 
@@ -36,7 +37,7 @@ let drawer = ref(true);
           <v-list-item prepend-icon="mdi-wrench-clock" title="Projeto 2" value="projeto2"></v-list-item>
         </RouterLink>
         <RouterLink to="/login" style="text-decoration: none">
-          <v-list-item prepend-icon="mdi-login" title="Login" value="login"></v-list-item>
+          <v-list-item prepend-icon="mdi-login" title="Logout" value="logout" @click="user.logout()"></v-list-item>
         </RouterLink>
       </v-list>
     </v-navigation-drawer>

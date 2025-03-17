@@ -6,7 +6,7 @@ import ProjectsPreview from "@/components/projectsPreview/ProjectsPreview.vue";
 <template>
 
   <v-card>
-    <v-card-title class="text-center">
+    <v-card-title class="text-center ">
       Bem-vindo(a) ao Projet's Menu.
     </v-card-title>
   </v-card>

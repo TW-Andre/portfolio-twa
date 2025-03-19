@@ -11,6 +11,5 @@ declare module 'vue' {
     ProjectsPreview: typeof import('./components/projectsPreview/ProjectsPreview.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SignUp: typeof import('./views/account/SignUp.vue')['default']
   }
 }

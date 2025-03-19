@@ -55,10 +55,12 @@ watch(user, (newVal)=>{
 <style scoped>
 .container {
 	height: calc(100vh);
-	background-image: url("https://img.freepik.com/vetores-gratis/fundo-branco-monocromatico-de-estilo-de-papel_52683-66443.jpg?t=st=1741980728~exp=1741984328~hmac=6d0a7bd1ea9a6b7245d2c3f0a1d1df55955bc4ddbdd3339ea85d37116c9dc122&w=996");
-	background-size: cover;
+	background-image: linear-gradient(30deg, #00599f, #000322);
 }
 .container .v-card {
 	background-color: #fafafa;
+	background-image: url("https://img.freepik.com/vetores-gratis/desenho-de-fundo-minimalista-de-linhas-brilhantes-abstratas-brancas-e-cinzentas_84443-2817.jpg?t=st=1742331461~exp=1742335061~hmac=be597a1e0fd77c59f3d27d82a3dbde8391f6fc96d157ca8d943dc4b6a8d2b87e&w=1380");
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 </style>

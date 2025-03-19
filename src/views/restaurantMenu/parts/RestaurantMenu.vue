@@ -12,73 +12,77 @@ let optionsMenu = ref([])
 const fetchPage = async ()=>{
   try {
     isLoading.value = true;
+	
+	/*let response = await httpService.get("data");
+	console.log(httpService.get());
+	*/
 
     optionsMenu.value = [
-      {
-        id: 1,
-        name: "Panquecas",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
-        price: 17.50,
-        category: ["all", "breakfast"],
-        src: "https://img.freepik.com/fotos-gratis/panquecas-com-morangos-e-chocolate-decorado-com-folhas-de-hortela_2829-14003.jpg?t=st=1741748248~exp=1741751848~hmac=4f8806b0d9d0030443b7683432cf0c041232fad80c68dfbd15fd4b312e4d04a6&w=996"
-      },
-      {
-        id: 2,
-        name: "À La Minuta",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
-        price: 20.00,
-        category: ["all", "meal"],
-        src: "https://img.freepik.com/fotos-premium/carne-arroz-feijao-e-batata-frita-prato-tipico-brasileiro_92534-1179.jpg?w=996"
-      },
-      {
-        id: 3,
-        name: "Milkshake",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
-        price: 15.00,
-        category: ["all", "drink"],
-        src: "https://img.freepik.com/fotos-gratis/milk-shake-em-cima-da-mesa_140725-9239.jpg?t=st=1741786211~exp=1741789811~hmac=0f4d39b7773f90396c52cd68e937de38f836b513b2df889fbe9982b3481ef852&w=740"
-      },
-      {
-        id: 4,
-        name: "Carne de Bovino",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
-        price: 35.00,
-        category: ["all", "meal"],
-        src: carneBovina,
-      },
-      {
-        id: 5,
-        name: "Hamburguer",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
-        price: 15.00,
-        category: ["all", "meal"],
-        src: hamburguer,
-      },
-      {
-        id: 6,
-        name: "Omelete",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
-        price: 10.00,
-        category: ["all", "breakfast"],
-        src: "https://img.freepik.com/fotos-gratis/omelete-de-cogumelos-colocada-na-alface-e-enrolada-em-fatias-de-tomate_140725-8337.jpg?t=st=1741788340~exp=1741791940~hmac=eefffa03feed2a2a0a4331f925bc491f77f286869ab6ba8908007712fc27ec0f&w=740"
-      },
-      {
-        id: 7,
-        name: "Suco de Laranja",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
-        price: 5.00,
-        category: ["all", "drink"],
-        src: orangeJuice,
-      },
-      {
-        id: 8,
-        name: "Cereal",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
-        price: 7.00,
-        category: ["all", "breakfast"],
-        src: cerealImg,
-      },
-    ];
+		{
+			id: 1,
+			name: "Panquecas",
+			description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
+			price: 17.50,
+			category: ["all", "breakfast"],
+			src: "https://img.freepik.com/fotos-gratis/panquecas-com-morangos-e-chocolate-decorado-com-folhas-de-hortela_2829-14003.jpg?t=st=1741748248~exp=1741751848~hmac=4f8806b0d9d0030443b7683432cf0c041232fad80c68dfbd15fd4b312e4d04a6&w=996"
+		},
+		{
+			id: 2,
+			name: "À La Minuta",
+			description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
+			price: 20.00,
+			category: ["all", "meal"],
+			src: "https://img.freepik.com/fotos-premium/carne-arroz-feijao-e-batata-frita-prato-tipico-brasileiro_92534-1179.jpg?w=996"
+		},
+		{
+			id: 3,
+			name: "Milkshake",
+			description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
+			price: 15.00,
+			category: ["all", "drink"],
+			src: "https://img.freepik.com/fotos-gratis/milk-shake-em-cima-da-mesa_140725-9239.jpg?t=st=1741786211~exp=1741789811~hmac=0f4d39b7773f90396c52cd68e937de38f836b513b2df889fbe9982b3481ef852&w=740"
+		},
+		{
+			id: 4,
+			name: "Carne de Bovino",
+			description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
+			price: 35.00,
+			category: ["all", "meal"],
+			src: carneBovina,
+		},
+		{
+			id: 5,
+			name: "Hamburguer",
+			description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
+			price: 15.00,
+			category: ["all", "meal"],
+			src: hamburguer,
+		},
+		{
+			id: 6,
+			name: "Omelete",
+			description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
+			price: 10.00,
+			category: ["all", "breakfast"],
+			src: "https://img.freepik.com/fotos-gratis/omelete-de-cogumelos-colocada-na-alface-e-enrolada-em-fatias-de-tomate_140725-8337.jpg?t=st=1741788340~exp=1741791940~hmac=eefffa03feed2a2a0a4331f925bc491f77f286869ab6ba8908007712fc27ec0f&w=740"
+		},
+		{
+			id: 7,
+			name: "Suco de Laranja",
+			description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
+			price: 5.00,
+			category: ["all", "drink"],
+			src: orangeJuice,
+		},
+		{
+			id: 8,
+			name: "Cereal",
+			description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eaque esse est facere minima quia veniam. Deserunt, expedita, voluptatibus?",
+			price: 7.00,
+			category: ["all", "breakfast"],
+			src: cerealImg,
+		},
+	];
 
   } catch (error) {
     alert(error.data);

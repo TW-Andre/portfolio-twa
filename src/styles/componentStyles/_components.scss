@@ -4,3 +4,20 @@
 .v-img__img {
      z-index: 1;
  }
+/*.v-navigation-drawer--rail {
+    min-width: 250px;
+}*/
+
+/*
+    COMO DEFINIR A RAIL PARA UM VALOR PEQUENO,
+    QUANDO A TELA FOR MAIOR QUE 600PX,
+    E ZERO, QUANDO FOR MENOR
+
+    ------------------------
+
+    QUANDO ' DRAWER ' ESTÁ DEFGINIDO COMO ' TRUE '
+    UMA PARTE PEQUENA DO MENU FICA EXIBIDO.
+    QUANDO ' FALSE ', SOME.
+
+    O QUE EXIBE POR COMPLETO, É A RAIL DENTRO DE LAYOUT
+*/

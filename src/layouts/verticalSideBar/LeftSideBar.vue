@@ -1,21 +1,24 @@
 <script setup>
 import {RouterLink} from "vue-router";
 import { userStore } from "@/stores/authStore";
+import {useSidebarStore} from "@/stores/sidebar";
 
-let {rail} = defineProps(['rail'])
-let user   = userStore();
+let user    = userStore();
+let sidebar = useSidebarStore();
+/*
 let drawer = ref(true);
-
+let rail = ref(true);*/
 </script>
 
 <template>
     <v-navigation-drawer
-      v-model="drawer"
-      class="border-opacity-0"
-      image="https://img.freepik.com/fotos-gratis/fundo-hexadecimal-para-redes_52683-137877.jpg?t=st=1741788750~exp=1741792350~hmac=6ce1637034d09e28034165e892dae1b55197f18d41991be60ec75b9691d5b5e9&w=740"
-      :rail="rail"
-      permanent
-    >
+      v-model="sidebar.Sidebar_drawer"
+      class="border-opacity-0 vertical-menu"
+	  :rail="sidebar.Rail_drawer"
+	  
+	  :rail-width="$vuetify.display.xs ? '240' : '56'"
+	  disable-resize-watcher
+	>
       <v-list-item
         class="py-4"
         prepend-icon="mdi-account"
@@ -26,7 +29,7 @@ let drawer = ref(true);
 
       <v-divider></v-divider>
 
-      <v-list class="side-bar" density="compact" nav>
+      <v-list class="side-bar-list" density="compact" nav>
         <RouterLink to="/" style="text-decoration: none">
           <v-list-item prepend-icon="mdi-home" title="Home" value="home"></v-list-item>
         </RouterLink>
@@ -41,12 +44,6 @@ let drawer = ref(true);
         </RouterLink>
       </v-list>
     </v-navigation-drawer>
-
-<!--      <v-main app>
-        <v-container class="page-wrapper pa-0">
-          <router-view/>
-        </v-container>
-      </v-main>-->
 
 </template>
 

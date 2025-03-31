@@ -30,13 +30,13 @@ const home = [
 
 const projetos = [
   {
-    path: '/menurestaurante',
+    path: '/projetos/menurestaurante',
     name: 'RestaurantMenu',
     component: () => import("@/views/restaurantMenu/index.vue"),
     meta: { title: 'Menu de Restaurante', requiresAuth: true, layout: Default }
   },
   {
-    path: '/projeto2',
+    path: '/projetos/projeto2',
     name: 'Projeto 2',
     component: () => import("@/views/projeto2/index.vue"),
     meta: { title: 'Projeto 2', requiresAuth: true, layout: Default }

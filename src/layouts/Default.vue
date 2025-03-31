@@ -1,16 +1,11 @@
 <script setup>
-import LeftSideBar from "@/layouts/verticalSideBar/LeftSideBar.vue";
-import Header from "@/layouts/verticalHeader/Header.vue";
+import DesktopSidebar from "@/layouts/desktopSidebar/LeftSidebar.vue";
+import MobileSidebar from "@/layouts/mobileSideBar/LeftSideBar.vue";
+import Header from "@/layouts/Header/Header.vue";
+import {useDisplay} from "vuetify";
 
-/*const resizeWindow = computed(()=>{
-	if (window.screen.width > 600) {
-		console.log('Beleza')
-	}
-})
+const { mobile } = useDisplay();
 
-if (window.screen.width > 600) {
-	console.log('Beleza')
-}*/
 </script>
 
 <template>
@@ -19,7 +14,8 @@ if (window.screen.width > 600) {
 		class="main-layout-wrapper justify-center position-relative"
 		id="layout-wrapper"
 	>
-		<LeftSideBar />
+		<DesktopSidebar v-if="!mobile"/>
+		<MobileSidebar v-if="mobile" />
 		<Header />
 		
 		<v-main app>

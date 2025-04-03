@@ -3,8 +3,8 @@ import cerealImg from "@/assets/restaurantMenuImages/Cereal.jpg";
 import orangeJuice from "@/assets/restaurantMenuImages/OrangeJuice.jpg";
 import carneBovina from "@/assets/restaurantMenuImages/CarneBovina.jpg";
 import hamburguer from "@/assets/restaurantMenuImages/Hamburguer.jpg";
-import { collection, getDocs } from 'firebase/firestore';
-import {db} from '@/firebase/index';
+/*import { collection, getDocs } from 'firebase/firestore';
+import {db} from '@/firebase/index';*/
 
 let isLoading        = ref(false);
 let categorySelected = ref("all");
@@ -15,12 +15,12 @@ const fetchPage = async ()=>{
 	try {
 		isLoading.value = true;
 		
-		let response = await getDocs(collection(db, "RestaurantMenu"));
+		/*let response = await getDocs(collection(db, "RestaurantMenu"));
 		response.forEach(doc => {
 			optionsMenu.value.push(doc.data())
-		})
+		})*/
 		
-		console.log(optionsMenu.value)
+		// console.log(optionsMenu.value)
 	
 		/*optionsMenu.value = [
 			{

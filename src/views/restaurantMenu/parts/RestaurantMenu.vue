@@ -1,12 +1,11 @@
 <script setup>
-import cerealImg from "@/assets/restaurantMenuImages/Cereal.jpg";
+/*import cerealImg from "@/assets/restaurantMenuImages/Cereal.jpg";
 import orangeJuice from "@/assets/restaurantMenuImages/OrangeJuice.jpg";
 import carneBovina from "@/assets/restaurantMenuImages/CarneBovina.jpg";
-import hamburguer from "@/assets/restaurantMenuImages/Hamburguer.jpg";
+import hamburguer from "@/assets/restaurantMenuImages/Hamburguer.jpg";*/
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from "@/firebase/index";
 
-import {db} from "@/firebase/index";
-
-const firestore 	 = await import('@firebase/firestore');
 let isLoading        = ref(false);
 let categorySelected = ref("all");
 
@@ -16,10 +15,10 @@ const fetchPage = async ()=>{
 	try {
 		isLoading.value = true;
 		
-		/*let response = await getDocs(collection(db, "RestaurantMenu"));
+		let response = await getDocs(collection(db, "RestaurantMenu"));
 		response.forEach(doc => {
 			optionsMenu.value.push(doc.data())
-		})*/
+		})
 		
 		// console.log(optionsMenu.value)
 	

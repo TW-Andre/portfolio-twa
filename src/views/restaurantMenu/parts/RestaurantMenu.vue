@@ -4,7 +4,7 @@ import orangeJuice from "@/assets/restaurantMenuImages/OrangeJuice.jpg";
 import carneBovina from "@/assets/restaurantMenuImages/CarneBovina.jpg";
 import hamburguer from "@/assets/restaurantMenuImages/Hamburguer.jpg";*/
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from "@/firebase/index";
+import { db } from '@/firebase/index';
 
 let isLoading        = ref(false);
 let categorySelected = ref("all");

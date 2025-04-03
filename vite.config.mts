@@ -54,6 +54,11 @@ export default defineConfig({
     }),
   ],
   define: { 'process.env': {} },
+  build: {
+    rollupOptions: {
+      external: ['firebase']
+    }
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

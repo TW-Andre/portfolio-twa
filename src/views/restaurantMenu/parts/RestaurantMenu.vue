@@ -3,9 +3,10 @@ import cerealImg from "@/assets/restaurantMenuImages/Cereal.jpg";
 import orangeJuice from "@/assets/restaurantMenuImages/OrangeJuice.jpg";
 import carneBovina from "@/assets/restaurantMenuImages/CarneBovina.jpg";
 import hamburguer from "@/assets/restaurantMenuImages/Hamburguer.jpg";
-import { collection, getDocs } from 'firebase/firestore';
+
 import {db} from "@/firebase/index";
 
+const firestore 	 = await import('firebase/firestore');
 let isLoading        = ref(false);
 let categorySelected = ref("all");
 

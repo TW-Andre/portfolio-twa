@@ -4,7 +4,7 @@ import orangeJuice from "@/assets/restaurantMenuImages/OrangeJuice.jpg";
 import carneBovina from "@/assets/restaurantMenuImages/CarneBovina.jpg";
 import hamburguer from "@/assets/restaurantMenuImages/Hamburguer.jpg";
 import { collection, getDocs } from 'firebase/firestore';
-import {db} from "@/firebase/index.js";
+import {db} from "@/firebase/index";
 
 let isLoading        = ref(false);
 let categorySelected = ref("all");
@@ -14,8 +14,6 @@ let optionsMenu = ref([]);
 const fetchPage = async ()=>{
 	try {
 		isLoading.value = true;
-		
-		console.log(db)
 		
 		/*let response = await getDocs(collection(db, "RestaurantMenu"));
 		response.forEach(doc => {

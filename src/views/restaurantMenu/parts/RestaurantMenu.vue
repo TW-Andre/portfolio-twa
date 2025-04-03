@@ -6,7 +6,7 @@ import hamburguer from "@/assets/restaurantMenuImages/Hamburguer.jpg";
 
 import {db} from "@/firebase/index";
 
-const firestore 	 = await import('firebase/firestore');
+const firestore 	 = await import('@firebase/firestore');
 let isLoading        = ref(false);
 let categorySelected = ref("all");
 

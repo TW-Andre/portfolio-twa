@@ -17,15 +17,17 @@ const breadcrumb = [
 
 <template>
 
-  <v-breadcrumbs title="Home" :items="breadcrumb"></v-breadcrumbs>
-
-  <v-card>
-    <v-card-title class="text-start">
-      Em Desenvolvimento
-    </v-card-title>
-  </v-card>
-
-  <Maintenance />
+	<v-card class="mt-3 px-lg-15 px-3">
+	
+		<v-breadcrumbs title="Home" :items="breadcrumb"></v-breadcrumbs>
+		
+		<v-card-title class="text-start">
+		  Em Desenvolvimento
+		</v-card-title>
+		
+		<Maintenance />
+	</v-card>
+	
 
 </template>
 

@@ -10,10 +10,13 @@ const { mobile } = useDisplay();
 
 <template>
 	
-	<v-app-bar class="app-bar-mobile">
+	<v-app-bar
+		class="app-bar-mobile position-fixed"
+		style="background-color: #337a6b"
+	>
 		
 		<v-toolbar
-			class="position-fixed"
+			class="text-white"
 			color="transparent"
 			style="width: 48px;"
 		>

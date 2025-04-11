@@ -1,48 +1,30 @@
-/*DEFAULT LAYOUT*/
-.main-container {
-  max-width: 95%;
-  padding-bottom: 30px;
+
+/*PROJECTS PREVIEW*/
+.card-hover {
+  overflow: hidden;
+}
+.card-hover .v-img {
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.card-hover .v-img:hover {
+  transform: scale(1.1);
+}
+.card-menus {
+  transition: all 1s;
 }
 
-/*LEFT SIDEBAR*/
-.side-bar-list {
-  .v-list-item {
-    color: #353b3f;
-  }
-  .mdi {
-    color: #001b89;
-  }
-}
 
-
-  /*PROJECTS PREVIEW*/
-  .card-hover {
-    overflow: hidden;
-  }
-  .card-hover .v-img {
-    -moz-transition: all 0.4s;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-  }
-  .card-hover .v-img:hover {
-    transform: scale(1.1);
-  }
-  .card-menus {
-    transition: all 1s;
-  }
-
-
-  @media screen and (max-width: 900px) {
-    /*DEFAULT LAYOUT*/
-    .main-layout-wrapper {
-      .v-main {
-        padding-inline: 0;
-      }
+@media screen and (max-width: 900px) {
+  /*DEFAULT LAYOUT*/
+  .main-layout-wrapper {
+    .v-main {
+      padding-inline: 0;
     }
-    /*.app-bar-mobile {
-      width: 100%;
-    }*/
   }
-/*@media screen and (max-width: 600px) {
+}
 
-}*/
+
+
+

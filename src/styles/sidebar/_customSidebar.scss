@@ -1,0 +1,31 @@
+/*LEFT SIDEBAR*/
+.vertical-menu {
+	/*background: -webkit-linear-gradient(50deg, #38c096, #01569a);!* Chrome 10-25, Safari 5.1-6 *!
+	background: linear-gradient(50deg, #38c096,#01569a);!* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+	background-color: #337a6b;
+
+	.v-list-item {
+		color: white;
+	}
+	.list-title-user {
+		font-size: 1.3rem;
+
+		.v-list-item-title {
+			font-size: 1.2rem;
+		}
+	}
+}
+
+.side-bar-list {
+	/*.mdi {
+		color: white;
+	}*/
+	.smallCap {
+		color: #a9ffdc;
+		font-size: .8rem;
+		font-weight: 500;
+	}
+	.hide-header {
+		visibility: hidden;
+	}
+}

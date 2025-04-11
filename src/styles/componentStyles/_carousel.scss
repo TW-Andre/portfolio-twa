@@ -1,0 +1,67 @@
+/* CONTAINER */
+.previewCards_container {
+	max-width: 100%;
+	min-height: 500px;
+	padding: 16px 30px;
+}
+
+/* CAROUSEL */
+:root {
+	--carousel-transition: 300ms;
+	--carousel-opacity-inactive: 0.7;
+	--carousel-opacity-active: 1;
+	--carousel-opacity-near: 0.9;
+
+	background-color: #242424;
+}
+.carousel__item {
+	min-height: 200px;
+	width: 100%;
+	background-color: var(--vc-clr-white);
+	color: var(--vc-clr-white);
+	font-size: 20px;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 15px auto;
+}
+.carousel__card_div {
+	min-height: 150px;
+	max-height: 200px;
+}
+.carousel__card_img {
+	min-height: 150px;
+	max-height: 200px;
+}
+.carousel__slide {
+	padding: 10px;
+}
+.carousel__viewport {
+	perspective: 4000px;
+}
+.carousel__track {
+	transform-style: preserve-3d;
+}
+.carousel__slide--sliding {
+	transition: .9s;
+}
+.carousel__slide {
+	opacity: 0.9;
+	transform: rotateY(-20deg) scale(0.9);
+}
+.carousel__slide--active ~ .carousel__slide {
+	transform: rotateY(20deg) scale(0.9);
+}
+.carousel__slide--prev {
+	opacity: 1;
+	transform: rotateY(-10deg) scale(0.95);
+}
+.carousel__slide--next {
+	opacity: 1;
+	transform: rotateY(10deg) scale(0.95);
+}
+.carousel__slide--active {
+	opacity: 1;
+	transform: rotateY(0) scale(1.1);
+}

@@ -8,8 +8,9 @@
 // @use 'vuetify/settings' with (
 //   $color-pack: false
 // );
-@import "componentStyles/components";
-@import "custom";
 @import "theme/default";
-
+@import "sidebar/customSidebar";
+@import "componentStyles/components";
+@import "componentStyles/carousel";
+@import "custom";
 /*@import "theme/_variables";*/

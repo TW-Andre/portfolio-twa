@@ -15,15 +15,15 @@ const breadcrumb = [
 
 <template>
 
-    <v-breadcrumbs title="Home" :items="breadcrumb"></v-breadcrumbs>
+    <v-card class="mt-3 px-lg-15 px-3">
 
-    <v-card>
-      <v-card-title class="text-start">
-        Menu de Restaurante
-      </v-card-title>
+    	<v-breadcrumbs title="Home" :items="breadcrumb"></v-breadcrumbs>
+		<v-card-title class="text-start">
+			Menu de Restaurante
+		</v-card-title>
+		<RestaurantMenu />
+
     </v-card>
-
-    <RestaurantMenu />
 
 </template>
 

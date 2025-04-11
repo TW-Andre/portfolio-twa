@@ -6,7 +6,7 @@ import maintenance from "@/assets/maintenance/maintenanceImg.jpg"
 
 <template>
 
-  <v-card class="mt-3 pa-6 justify-center">
+  <v-card class="mt-3 px-lg-15 px-3 justify-center">
 
     <v-img
       height="600"

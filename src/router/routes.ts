@@ -32,14 +32,20 @@ const projetos = [
   {
     path: '/projetos/menurestaurante',
     name: 'RestaurantMenu',
-    component: () => import("@/views/restaurantMenu/index.vue"),
+    component: () => import("@/views/projects/restaurantMenu/index.vue"),
     meta: { title: 'Menu de Restaurante', requiresAuth: true, layout: Default }
   },
   {
     path: '/projetos/projeto2',
     name: 'Projeto 2',
-    component: () => import("@/views/projeto2/index.vue"),
+    component: () => import("@/views/projects/projeto2/index.vue"),
     meta: { title: 'Projeto 2', requiresAuth: true, layout: Default }
+  },
+  {
+    path: '/projetos/curiosidades',
+    name: 'Curiosidades',
+    component: () => import("@/views/projects/curiosities/index.vue"),
+    meta: { title: 'Curiosidades', requiresAuth: true, layout: Default }
   },
 ];
 

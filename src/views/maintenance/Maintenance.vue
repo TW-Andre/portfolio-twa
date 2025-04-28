@@ -1,5 +1,5 @@
 <script setup>
-import maintenance from "@/assets/maintenance/maintenanceImg.jpg"
+import maintenance from "@/assets/maintenance/maintenanceImg1.jpg"
 
 
 </script>

@@ -2,7 +2,7 @@
 .previewCards_container {
 	max-width: 100%;
 	min-height: 500px;
-	padding: 16px 30px;
+	padding: 0;
 }
 
 /* CAROUSEL */
@@ -13,6 +13,12 @@
 	--carousel-opacity-near: 0.9;
 
 	background-color: #242424;
+}
+.previewCards_container {
+
+	.carousel {
+		max-width: 80%;
+	}
 }
 .carousel__item {
 	min-height: 200px;
@@ -29,6 +35,7 @@
 .carousel__card_div {
 	min-height: 150px;
 	max-height: 200px;
+	min-width: 440px;
 }
 .carousel__card_img {
 	min-height: 150px;
@@ -38,7 +45,7 @@
 	padding: 10px;
 }
 .carousel__viewport {
-	perspective: 4000px;
+	perspective: 1000px;
 }
 .carousel__track {
 	transform-style: preserve-3d;
@@ -54,11 +61,11 @@
 	transform: rotateY(20deg) scale(0.9);
 }
 .carousel__slide--prev {
-	opacity: 1;
+	opacity: .7;
 	transform: rotateY(-10deg) scale(0.95);
 }
 .carousel__slide--next {
-	opacity: 1;
+	opacity: .7;
 	transform: rotateY(10deg) scale(0.95);
 }
 .carousel__slide--active {

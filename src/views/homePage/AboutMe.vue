@@ -1,40 +1,81 @@
 <script setup>
+import {userStore} from "@/stores/authStore";
+
+// const linkedinUrl = "https://www.linkedin.com/in/andredossantosjp/";
+
+let user    = userStore();
+let loadStyles1 = ref(false);
+let loadStyles2 = ref(false);
+/*const iconStyles  = {
+	classes: [''],
+	color: 'teal-accent-4'
+};*/
 
 const header = ref({
-	title: "Bem-vindo(a) ao Projet's Menu.",
-	introduction: "Neste espaço, apresento um projeto desenvolvido utilizando a poderosa tecnologia Vue.js, que permite criar interfaces de usuário interativas e reativas de forma eficiente. Com uma arquitetura baseada em componentes, o Vue ajuda a manter o código organizado e fácil de manter.\n" +
-	"Nesta página, você encontrará uma seleção de cards de preview, que oferecem uma amostra do que está por vir. Também exibe as ferramentas utilizadas. Cada card destacará diferentes recursos e funcionalidades que estou explorando, refletindo o meu conhecimento e habilidades no desenvolvimento front-end.\n" +
-	"No final de cada página de projeto, haverá uma breve explicação dos conceitos utilizados no desenvolvimento.",
+	title: "Bem-vindo(a)",
+	introduction: "Eu sou o André! Um desenvolvedor web especializado em front-end com Vue.Js. Próximo de 1 ano de experiência, com participação em 3 projetos. Destes, 2 atualmente em desenvolvimento, para a ",
+	company: "Geoblue - Soluções Ambientais",
+	briefing: "Sinta-se a vontade para explorar esta aplicação e conhecer um pouco de minhas habilidades.",
 	emphase: "Este é um projeto em desenvolvimento, então haverá melhorias constantes ao decorrer do tempo."
+	/*introduction: "Este projeto foi desenvolvido utilizando a tecnologia Vue.js, que permite criar interfaces de usuário interativas e reativas de forma eficiente. Com uma arquitetura baseada em componentes, o Vue ajuda a manter o código organizado e fácil de manter.\n" +
+	"Sinta-se livre para explorar! Logo abaixo há cards que destacaram diferentes recursos e funcionalidades que estou combinando, refletindo o meu conhecimento e habilidades no desenvolvimento front-end.\n",*/
 })
 
+/*const openSocialMedia = () => {
+	window.open(linkedinUrl, 'blank');
+}*/
 </script>
 
 <template>
 	
-	<v-card-title class="text-center my-7">
-		<h2>{{ header.title }}</h2>
-	</v-card-title>
-	
-	<v-card-text class="text-start">
-		<v-row>
-<!--			<v-col cols="6">
-				<v-img
-					height="250"
-					src="https://img.freepik.com/vetores-gratis/ilustracao-do-jovem-sorridente_1308-173524.jpg?t=st=1744083909~exp=1744087509~hmac=7d8f03af133a67f7c00f3ac2adf32ad20c46040da6fb928358329a98cf9b4618&w=740"
-				></v-img>
-			</v-col>-->
-			<v-col cols="12" sm="6" class="text-uppercase">
-				<strong>Imagina um conteúdo aqui, tipo uma imagem</strong>
-			</v-col>
+	<div class="image-mask-about-me">
+		<v-container class="container_about-me px-15" fluid>
 			
-			<v-col cols="12" md="6" style="font-size: 1.1rem;">
-				<p>{{ header.introduction }}</p>
-				<span style="font-weight: 600">{{ header.emphase }}</span>
-			</v-col>
-		</v-row>
-	</v-card-text>
-
+			<v-card
+				class="top-0 mt-5" color="transparent"
+				flat
+			>
+				<v-card-title
+					class="text-center text-uppercase text-white pt-0"
+					
+				>
+					<h1><i>{{ header.title }}, {{ user.user }}!</i></h1>
+				</v-card-title>
+			</v-card>
+			
+			<div class="align-content-center mt-14">
+				<v-row>
+					<v-col cols="12" md="8" lg="7" style="font-size: 1.2rem;">
+						<v-card class="text-white pa-5" border>
+							<p>{{ header.introduction }} <span class="font-weight-bold">{{ header.company }}</span>.</p>
+							<p>{{ header.briefing }}</p>
+							<span class="font-italic" style="font-weight: 600">{{ header.emphase }}</span>
+						</v-card>
+					</v-col>
+				</v-row>
+			</div>
+			
+	<!--		<v-card-text class="mt-4 pa-0">
+				<v-icon
+					icon="mdi mdi-linkedin"
+					:color="loadStyles1 ? 'teal-accent-4' : 'white'"
+					size="45"
+					@mouseover="loadStyles1 = !loadStyles1"
+					@mouseout="loadStyles1 = !loadStyles1"
+					@click="openSocialMedia"
+				></v-icon>
+				<v-icon
+					icon="mdi mdi-github"
+					:color="loadStyles2 ? 'teal-accent-4' : 'white'"
+					size="45"
+					@mouseover="loadStyles2 = !loadStyles2"
+					@mouseout="loadStyles2 = !loadStyles2"
+					@click="openSocialMedia"
+				></v-icon>
+			</v-card-text>-->
+		
+		</v-container>
+	</div>
 </template>
 
 <style scoped>

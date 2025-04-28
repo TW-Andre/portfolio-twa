@@ -27,7 +27,7 @@ let sidebar = useSidebarStore();
 		
 		<v-list class="side-bar-list" density="compact" nav>
 			<RouterLink to="/">
-				<v-list-item prepend-icon="mdi-home" color="info" title="Home" value="home"></v-list-item>
+				<v-list-item prepend-icon="mdi-home" title="Home" value="home"></v-list-item>
 			</RouterLink>
 			
 			<v-list-subheader class="smallCap text-uppercase">
@@ -39,6 +39,9 @@ let sidebar = useSidebarStore();
 			</RouterLink>
 			<RouterLink to="/projetos/projeto2">
 				<v-list-item prepend-icon="mdi-wrench-clock" title="Projeto 2" value="projeto2"></v-list-item>
+			</RouterLink>
+			<RouterLink to="/projetos/curiosidades">
+				<v-list-item prepend-icon="mdi-information-outline" title="Curiosidades" value="curiosities"></v-list-item>
 			</RouterLink>
 			
 			<v-list-subheader class="smallCap text-uppercase">

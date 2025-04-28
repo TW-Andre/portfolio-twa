@@ -4,7 +4,13 @@ let { jsonProjects } = defineProps(['jsonProjects']);
 </script>
 
 <template>
+	<v-card-title
+		class="text-h5 text-decoration-underline text-capitalize text-center pt-0 pb-sm-10"
+	>
+		Desenvolvimentos em Destaque
+	</v-card-title>
 	<v-row>
+		
 		<template v-for="(item, index) in jsonProjects">
 			<v-col cols="12" md="6">
 				<v-card class="mx-auto my-2 card-hover" max-width="450">

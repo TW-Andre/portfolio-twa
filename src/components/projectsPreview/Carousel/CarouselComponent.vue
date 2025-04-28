@@ -6,18 +6,28 @@ import { Carousel, Slide, Navigation } from 'vue3-carousel';
 let { jsonProjects } = defineProps(['jsonProjects']);
 
 const carouselConfig = {
-	itemsToShow: 3.5,
+	itemsToShow: 3,
 	wrapAround: true,
-	autoplay: 4000,
+	autoplay: 2500,
 	pauseAutoplayOnHover: true,
+	transition: 500,
+	gap: 1
 }
 </script>
 
 <template>
-	<Carousel v-bind="carouselConfig">
+	
+	<v-card-title
+		class="text-h5 text-decoration-underline text-capitalize pt-0"
+		style="width: 80%; margin-left: 11%"
+	>
+		Desenvolvimentos em Destaque
+	</v-card-title>
+	
+	<Carousel v-bind="carouselConfig" class="mx-auto">
 		<Slide v-for="item in jsonProjects" :key="item.id">
 			<div class="carousel__item">
-				<v-card class="w-100 mx-auto">
+				<v-card class="mx-auto">
 					<v-img class="carousel__card_img" :src="item.src" height="200" cover></v-img>
 					<div class="carousel__card_div">
 						<v-card-title>{{ item.title }}</v-card-title>
@@ -27,6 +37,7 @@ const carouselConfig = {
 								color="success"
 								variant="outlined"
 								:to="item.link"
+								:disabled="item.link === '/'"
 								style=""
 							>Ver Projeto</v-btn>
 						</v-card-actions>
@@ -35,7 +46,9 @@ const carouselConfig = {
 			</div>
 		</Slide>
 		
-		<!--			<Navigation class="w-100"/>-->
+		<template class="w-100">
+			<Navigation class="w-100"/>
+		</template>
 	</Carousel>
 </template>
 

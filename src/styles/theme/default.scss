@@ -14,15 +14,26 @@
 	text-shadow: none;
 }
 
+//LOGIN
+#login-page {
+	height: 100vh;
+	background: -webkit-linear-gradient(90deg, #75dbb9,#3a8c5b,#034304);/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(90deg, #75dbb9,#3a8c5b,#034304);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#login-page .v-card {
+	background-color: #fafafa;
+	border-radius: 30px;
+}
+
 /*DEFAULT LAYOUT*/
 .app-bar-mobile {
 }
 .main-container {
 	max-width: 100%;
 	padding-bottom: 30px;
-	background-color: #311b92;
 }
 .main-card-homePage {
+	width: 100%;
 	/*background-image: url("https://img.freepik.com/vetores-gratis/fundo-hexagonal-gradiente_23-2148938116.jpg?t=st=1744313883~exp=1744317483~hmac=7e2fcc52e0b57224007710dcfe493c2dd9f81e71dcfaa4ea9cdd498f9c3bf819&w=996");
 	--webkit-background-image: url("https://img.freepik.com/vetores-gratis/fundo-hexagonal-gradiente_23-2148938116.jpg?t=st=1744313883~exp=1744317483~hmac=7e2fcc52e0b57224007710dcfe493c2dd9f81e71dcfaa4ea9cdd498f9c3bf819&w=996");
 	background-size: cover;

@@ -3,6 +3,9 @@
 /*ABOUT ME*/
 .image-mask-about-me {
   background-image: url("src/assets/bg-8.jpg");
+  -moz-background-image: url("src/assets/bg-8.jpg");
+  -webkit-background-image: url("src/assets/bg-8.jpg");
+
   background-size: cover;
 }
 .container_about-me {

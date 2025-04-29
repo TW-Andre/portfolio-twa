@@ -41,11 +41,19 @@ const projetos = [
     component: () => import("@/views/projects/projeto2/index.vue"),
     meta: { title: 'Projeto 2', requiresAuth: true, layout: Default }
   },
+];
+const curiosidades = [
   {
-    path: '/projetos/curiosidades',
+    path: '/curiosidades/sobremim',
+    name: 'AboutMe',
+    component: () => import("@/views/curiosities/aboutMe/index.vue"),
+    meta: { title: 'Sobre mim', requiresAuth: true, layout: Default }
+  },
+  {
+    path: '/curiosidades/ferramentas',
     name: 'Curiosidades',
-    component: () => import("@/views/projects/curiosities/index.vue"),
-    meta: { title: 'Curiosidades', requiresAuth: true, layout: Default }
+    component: () => import("@/views/curiosities/tools/index.vue"),
+    meta: { title: 'Ferramentas', requiresAuth: true, layout: Default }
   },
 ];
 
@@ -53,4 +61,5 @@ export const myRoutes = [
     ...user,
     ...home,
     ...projetos,
+    ...curiosidades
 ];

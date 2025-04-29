@@ -1,5 +1,5 @@
 <script setup>
-import Tools from "@/views/projects/curiosities/parts/Tools.vue";
+import Tools from "@/views/curiosities/tools/parts/Tools.vue";
 
 const breadcrumb = [
 	{
@@ -7,7 +7,7 @@ const breadcrumb = [
 		disabled: true,
 	},
 	{
-		title: 'Curiosidades',
+		title: 'Ferramentas',
 		disabled: false,
 	},
 ];
@@ -18,7 +18,7 @@ const breadcrumb = [
 <template>
 	<v-card class="mt-3 px-lg-15 px-3" flat>
 		
-		<v-breadcrumbs title="Curiosidades" :items="breadcrumb"></v-breadcrumbs>
+		<v-breadcrumbs :items="breadcrumb"></v-breadcrumbs>
 		<v-card-title class="text-start">
 			Ferramentas
 		</v-card-title>

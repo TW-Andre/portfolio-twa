@@ -45,26 +45,20 @@ let sidebar = useSidebarStore();
 			<RouterLink to="/projetos/projeto2">
 				<v-list-item prepend-icon="mdi-wrench-clock" title="Projeto 2" value="projeto2"></v-list-item>
 			</RouterLink>
-			<RouterLink to="/projetos/curiosidades">
-				<v-list-item prepend-icon="mdi-information-outline" title="Curiosidades" value="curiosities"></v-list-item>
-			</RouterLink>
-<!--
+			
 			<v-list-subheader
 				class="smallCap text-uppercase mt-1"
 				:class="[sidebar.Rail_drawer ? 'hide-header' : '']"
 			>
-				<span class="mini-text">sistema</span>
+				<span class="mini-text">Curiosidades</span>
 			</v-list-subheader>
 			
-			<RouterLink to="/login">
-				<v-list-item
-					title="Logout"
-					value="logout"
-					prepend-icon="mdi-login"
-					@click="user.logout()"
-				></v-list-item>
+			<RouterLink to="/curiosidades/sobremim">
+				<v-list-item prepend-icon="mdi-account-question" title="Sobre mim" value="aboutme"></v-list-item>
 			</RouterLink>
-			-->
+			<RouterLink to="/curiosidades/ferramentas">
+				<v-list-item prepend-icon="mdi-tools" title="Ferramentas" value="tools"></v-list-item>
+			</RouterLink>
 		</v-list>
 	</v-navigation-drawer>
 

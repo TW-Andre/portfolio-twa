@@ -44,9 +44,10 @@ const submitLogin = async () => {
 								:class="[wrongFormat ? 'text-error' : '']"
 								:color="wrongFormat ? '' : 'teal'"
 								clearable
-								hint="3 ou mais caracteres"
+								hint="Serve para demonstrar a ferramenta Pinia."
 								variant="underlined"
 								label="Nome de Usuário"
+								placeholder="Preencha com seu nome"
 								></v-text-field>
 							</v-col>
 							

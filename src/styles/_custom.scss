@@ -63,6 +63,15 @@
 .card-menus {
   transition: all 1s;
 }
+/*RESTAURANT MENU*/
+.card-menu {
+  width: 100%;
+
+  .img-card-menu {
+    min-width: 360px;
+    max-width: 360px;
+  }
+}
 
 @media screen and (max-width: 900px) {
   /*DEFAULT LAYOUT*/
@@ -75,9 +84,40 @@
     height: 85vh;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (min-width: 600px) and (max-width: 650px) {
+  /*HOME*/
   .container_about-me {
     height: 110vh;
+  }
+  /*RESTAURANT MENU*/
+  .row-cards-menu {
+    margin: 0 auto;
+
+    .card-menu {
+
+      .img-card-menu {
+        min-width: 300px;
+        max-width: 300px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  /*RESTAURANT MENU*/
+  .btn-menu {
+    font-size: .7rem;
+  }
+  .row-cards-menu {
+    margin: 0 auto;
+
+    .card-menu {
+
+      .img-card-menu {
+        min-width: 400px;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
   }
 }
 @media screen and (max-width: 500px) {

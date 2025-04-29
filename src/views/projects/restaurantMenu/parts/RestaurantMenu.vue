@@ -104,35 +104,35 @@ onMounted(async()=>{
 
 <template>
 
-  <v-card class="mt-3 mb-12 pa-sm-6">
+  <v-card class="mt-3 mb-12 pa-sm-6 pt-sm-auto pt-5">
     <v-row class="justify-center">
-      <v-col cols="auto">
-        <v-btn class="" color="success" density="comfortable" variant="outlined" value="all" @click="filterItem('all')">
+      <v-col class="" cols="auto">
+        <v-btn class="btn-menu" color="success" density="comfortable" variant="outlined" value="all" @click="filterItem('all')">
           Tudo
         </v-btn>
       </v-col>
 
-      <v-col cols="auto">
-        <v-btn class="" color="success" density="comfortable" variant="outlined" value="breakfast" @click="filterItem('breakfast')">
+      <v-col class="px-0" cols="auto">
+        <v-btn class="btn-menu" color="success" density="comfortable" variant="outlined" value="breakfast" @click="filterItem('breakfast')">
           Café da Manhã
         </v-btn>
       </v-col>
 
-      <v-col cols="auto">
-        <v-btn class="" color="success" density="comfortable" variant="outlined" value="meal" @click="filterItem('meal')">
+      <v-col class="" cols="auto">
+        <v-btn class="btn-menu" color="success" density="comfortable" variant="outlined" value="meal" @click="filterItem('meal')">
           Refeições
         </v-btn>
       </v-col>
 
-      <v-col cols="auto">
-        <v-btn class="" color="success" density="comfortable" variant="outlined" value="drink" @click="filterItem('drink')">
+      <v-col class="ps-0" cols="auto">
+        <v-btn class="btn-menu" color="success" density="comfortable" variant="outlined" value="drink" @click="filterItem('drink')">
           Bebidas
         </v-btn>
       </v-col>
 
     </v-row>
 
-    <v-row>
+    <v-row class="row-cards-menu">
       <v-col
         v-for="(item, index) in optionsMenu"
         v-show="item.category.includes(categorySelected)"
@@ -140,7 +140,7 @@ onMounted(async()=>{
         lg="6"
         style="transition-delay: 1s"
       >
-        <v-card class="d-flex justify-start" style="width: 100%">
+        <v-card class="card-menu d-block d-sm-flex justify-start">
           <v-overlay
             :model-value="isLoading"
             class="align-center justify-center"
@@ -154,13 +154,13 @@ onMounted(async()=>{
 
           <v-img
             v-if="!isLoading"
-            height="200"
+            class="img-card-menu"
+			height="200"
             cover
             :src="item.src"
-            style="min-width: 360px ;max-width: 360px"
           ></v-img>
 
-          <v-card-item class="align-content-start flex-fill">
+          <v-card-item class="align-content-start flex-fill flex-wrap">
             <v-card-title class="d-flex justify-space-between">
               <div>{{ item.name }}</div>
 

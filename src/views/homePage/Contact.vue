@@ -7,14 +7,14 @@ let loadStyles1 = ref(false);
 let loadStyles2 = ref(false);
 
 const openSocialMedia = (item) => {
-	window.open(item, 'blank')
+	window.open(item, 'blank');
 }
 </script>
 
 <template>
-	<v-container class="text-center px-15" fluid>
+	<v-container class="text-center px-md-15 pt-0" fluid>
 		<v-card-title class="text-h5 text-capitalize pt-0">
-			<H3>Contato</H3>
+			<h3>Contato</h3>
 		</v-card-title>
 		
 		<v-card-text  class="">

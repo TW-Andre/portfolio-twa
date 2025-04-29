@@ -18,7 +18,7 @@ let sidebar = useSidebarStore();
       <v-list-item
         class="list-title-user py-5"
         prepend-icon="mdi-account"
-        :title="user.getUser()"
+        title="Portfólio"
 		slim
         nav
       ></v-list-item>
@@ -43,7 +43,7 @@ let sidebar = useSidebarStore();
 			<RouterLink to="/projetos/curiosidades">
 				<v-list-item prepend-icon="mdi-information-outline" title="Curiosidades" value="curiosities"></v-list-item>
 			</RouterLink>
-			
+<!--
 			<v-list-subheader class="smallCap text-uppercase">
 				<span class="mini-text">sistema</span>
 			</v-list-subheader>
@@ -56,6 +56,7 @@ let sidebar = useSidebarStore();
 					@click="user.logout()"
 				></v-list-item>
 			</RouterLink>
+			-->
 		</v-list>
     </v-navigation-drawer>
 

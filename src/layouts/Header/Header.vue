@@ -1,20 +1,11 @@
 <script setup>
 import {useSidebarStore} from "@/stores/sidebar";
 import {useDisplay} from "vuetify";
+import Profile from "@/components/account/Profile.vue";
 
-let sidebar 	  = useSidebarStore();
-const { mobile }  = useDisplay();
+let sidebar 	 = useSidebarStore();
+const { mobile } = useDisplay();
 
-/*let isFullscreen = ref(false);
-
-const toggleScreen = (item) => {
-	if (!item) {
-		document.body.requestFullscreen()
-	} else {
-		document.exitFullscreen()
-	}
-	isFullscreen.value = !isFullscreen.value;
-}*/
 </script>
 
 <template>
@@ -34,6 +25,8 @@ const toggleScreen = (item) => {
 				<v-btn v-show="!sidebar.Rail_drawer" icon="$close" @click="sidebar.SET_RAIL_DRAWER"></v-btn>
 			</template>
 		</v-toolbar>
+		
+		<Profile />
 		
 <!--		<v-card-text v-if="!mobile" class="text-end mr-auto me-5 pa-0">
 			<v-icon

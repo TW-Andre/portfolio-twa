@@ -10,6 +10,7 @@ declare module 'vue' {
     CarouselComponent: typeof import('./components/projectsPreview/Carousel/CarouselComponent.vue')['default']
     MenuItems: typeof import('./components/layouts/MenuItems.vue')['default']
     MobileCardsComponent: typeof import('./components/projectsPreview/MobileCards/MobileCardsComponent.vue')['default']
+    Profile: typeof import('./components/account/Profile.vue')['default']
     ProjectsPreview: typeof import('./components/projectsPreview/ProjectsPreview.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

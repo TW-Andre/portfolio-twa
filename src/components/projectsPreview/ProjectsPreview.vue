@@ -52,7 +52,7 @@ const jsonProjects = [
 	<v-container class="previewCards_container">
 		<v-card-text
 			v-show="mobile"
-			class="text-center"
+			class="text-center pt-0"
 		>
 			<p>Seção de cards com <span class="font-italic font-weight-bold">preview</span> de mini-projetos desenvolvidos dentro da aplicação.</p>
 			<p>Cada um deles explora diferentes conceitos, expondo alguns conhecimentos.</p>
@@ -64,7 +64,7 @@ const jsonProjects = [
 		
 		<v-card-text
 			v-show="!mobile"
-			class="text-center mt-3"
+			class="text-center mt-3 pb-0"
 		>
 			<p>Esse <span class="font-italic font-weight-bold">carrossel</span> de cards representa um <span class="font-italic font-weight-bold">preview</span> de mini-projetos desenvolvidos dentro da aplicação.</p>
 			<p>Cada um deles explora diferentes conceitos, expondo alguns conhecimentos.</p>

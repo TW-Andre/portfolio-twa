@@ -4,7 +4,7 @@ import {onMounted} from "vue";
 import {RouterLink} from "vue-router";
 import {userStore} from "@/stores/authStore";
 
-let user    	= userStore();
+const user    	= userStore();
 const menuItems = myRoutes;
 
 onMounted(()=>{

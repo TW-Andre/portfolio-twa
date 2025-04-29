@@ -104,7 +104,7 @@ onMounted(async()=>{
 
 <template>
 
-  <v-card class="mt-3 mb-12 pa-6">
+  <v-card class="mt-3 mb-12 pa-sm-6">
     <v-row class="justify-center">
       <v-col cols="auto">
         <v-btn class="" color="success" density="comfortable" variant="outlined" value="all" @click="filterItem('all')">

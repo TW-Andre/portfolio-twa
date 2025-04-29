@@ -5,15 +5,15 @@ let { jsonProjects } = defineProps(['jsonProjects']);
 
 <template>
 	<v-card-title
-		class="text-h5 text-decoration-underline text-capitalize text-center pt-0 pb-sm-10"
+		class="flex-wrap text-sm-h5 text-h6 text-decoration-underline text-capitalize text-center pt-0 pb-sm-10"
 	>
-		Desenvolvimentos em Destaque
+		Projetos em Destaque
 	</v-card-title>
 	<v-row>
 		
 		<template v-for="(item, index) in jsonProjects">
 			<v-col cols="12" md="6">
-				<v-card class="mx-auto my-2 card-hover" max-width="450">
+				<v-card class="mx-auto my-2 card-hover" min-width="250" max-width="450">
 					<RouterLink :to="item.link" style="text-decoration: none">
 						<v-img
 							color="surface-variant"

@@ -13,7 +13,8 @@ let loadStyles2 = ref(false);
 
 const header = ref({
 	title: "Bem-vindo(a)",
-	introduction: "Eu sou o André! Um desenvolvedor web especializado em front-end com Vue.Js. Próximo de 1 ano de experiência, com participação em 3 projetos. Destes, 2 atualmente em desenvolvimento, para a ",
+	// introduction: "Eu sou o André! Um desenvolvedor web especializado em front-end com Vue.Js. Próximo de 1 ano de experiência, com participação em 3 projetos. Destes, 2 atualmente em desenvolvimento, para a ",
+	introduction: "Eu sou o André! Desenvolvedor web especializado em front-end com Vue.Js.",
 	company: "Geoblue - Soluções Ambientais",
 	briefing: "Sinta-se a vontade para explorar esta aplicação e conhecer um pouco de minhas habilidades.",
 	emphase: "Este é um projeto em desenvolvimento, então haverá melhorias constantes ao decorrer do tempo."
@@ -29,7 +30,7 @@ const header = ref({
 <template>
 	
 	<div class="image-mask-about-me">
-		<v-container class="container_about-me px-15" fluid>
+		<v-container class="container_about-me px-sm-15" fluid>
 			
 			<v-card
 				class="top-0 mt-5" color="transparent"
@@ -37,23 +38,24 @@ const header = ref({
 			>
 				<v-card-title
 					class="text-center text-uppercase text-white pt-0"
-					
 				>
-					<h1><i>{{ header.title }}, {{ user.user }}!</i></h1>
+					<v-card-text class="text-lg-h1 text-md-h2 text-h5 ma-0 pa-0 pt-5">{{ header.title }}, {{ user.user }}!</v-card-text>
 				</v-card-title>
+				
+				<v-card flat class="mt-14" color="transparent">
+					<v-row>
+						<v-col cols="12" md="8" lg="7" style="font-size: 1.2rem;">
+							<v-card class="text-white pa-sm-10 pa-4 text-md-h5" flat>
+								<p>{{ header.introduction }}</p>
+<!--									<span class="font-weight-bold">{{ header.company }}</span>.-->
+								<p>{{ header.briefing }}</p>
+								<span class="font-italic" style="font-weight: 600">{{ header.emphase }}</span>
+							</v-card>
+						</v-col>
+					</v-row>
+				</v-card>
+				
 			</v-card>
-			
-			<div class="align-content-center mt-14">
-				<v-row>
-					<v-col cols="12" md="8" lg="7" style="font-size: 1.2rem;">
-						<v-card class="text-white pa-5" border>
-							<p>{{ header.introduction }} <span class="font-weight-bold">{{ header.company }}</span>.</p>
-							<p>{{ header.briefing }}</p>
-							<span class="font-italic" style="font-weight: 600">{{ header.emphase }}</span>
-						</v-card>
-					</v-col>
-				</v-row>
-			</div>
 			
 	<!--		<v-card-text class="mt-4 pa-0">
 				<v-icon

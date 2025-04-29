@@ -2,7 +2,7 @@
 import {RouterLink} from "vue-router";
 import { userStore } from "@/stores/authStore";
 import {useSidebarStore} from "@/stores/sidebar";
-import MenuItems from "@/components/layouts/MenuItems.vue";
+import portfolio_icon from '@/assets/portfolio-icon.png'
 
 let user    = userStore();
 let sidebar = useSidebarStore();
@@ -17,8 +17,8 @@ let sidebar = useSidebarStore();
 	>
 		<v-list-item
 			class="list-title-user py-5"
-			prepend-icon="mdi-account"
-			:title="user.getUser()"
+			:prepend-avatar="portfolio_icon"
+			title="Portfólio"
 			slim
 			nav
 		></v-list-item>
@@ -48,7 +48,7 @@ let sidebar = useSidebarStore();
 			<RouterLink to="/projetos/curiosidades">
 				<v-list-item prepend-icon="mdi-information-outline" title="Curiosidades" value="curiosities"></v-list-item>
 			</RouterLink>
-			
+<!--
 			<v-list-subheader
 				class="smallCap text-uppercase mt-1"
 				:class="[sidebar.Rail_drawer ? 'hide-header' : '']"
@@ -64,6 +64,7 @@ let sidebar = useSidebarStore();
 					@click="user.logout()"
 				></v-list-item>
 			</RouterLink>
+			-->
 		</v-list>
 	</v-navigation-drawer>
 

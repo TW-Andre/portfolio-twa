@@ -33,12 +33,12 @@ const aboutMeContent = {
 		{
 			company: "Geoblue - Soluções Ambientais",
 			role: "Desenvolvedor Front-End - Vue.js",
-			period: "2023 - Presente"
+			period: "2024 - Presente"
 		},
 		{
 			company: "Prodata - Gestão de Empresas",
 			role: "Desenvolvedor Front-End - Vue.js",
-			period: "2023 - Presente"
+			period: "2024"
 		}
 	]
 };

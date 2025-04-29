@@ -16,11 +16,11 @@ const header = ref({
 	// introduction: "Eu sou o André! Um desenvolvedor web especializado em front-end com Vue.Js. Próximo de 1 ano de experiência, com participação em 3 projetos. Destes, 2 atualmente em desenvolvimento, para a ",
 	introduction: "André dos Santos",
 	company: "Geoblue - Soluções Ambientais",
-	briefing: "Desenvolvedor Front-End - Vue.Js",
-	emphase: "Este e meu portfólio. Sinta-se à vontade para explorar"
+	briefing: "Desenvolvedor Front-End",
+	emphase: "Este é meu portfólio. Sinta-se à vontade para explorar"
 	/*introduction: "Este projeto foi desenvolvido utilizando a tecnologia Vue.js, que permite criar interfaces de usuário interativas e reativas de forma eficiente. Com uma arquitetura baseada em componentes, o Vue ajuda a manter o código organizado e fácil de manter.\n" +
 	"Sinta-se livre para explorar! Logo abaixo há cards que destacaram diferentes recursos e funcionalidades que estou combinando, refletindo o meu conhecimento e habilidades no desenvolvimento front-end.\n",*/
-})
+});
 
 /*
 const header = ref({

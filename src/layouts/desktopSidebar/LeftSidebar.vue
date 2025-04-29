@@ -18,7 +18,7 @@ let sidebar = useSidebarStore();
 		<v-list-item
 			class="list-title-user py-5"
 			:prepend-avatar="portfolio_icon"
-			title="Portfólio"
+			title="André dos Santos"
 			slim
 			nav
 		></v-list-item>

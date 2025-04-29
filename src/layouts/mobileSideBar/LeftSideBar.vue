@@ -2,6 +2,7 @@
 import {RouterLink} from "vue-router";
 import { userStore } from "@/stores/authStore";
 import {useSidebarStore} from "@/stores/sidebar";
+import portfolio_icon from "@/assets/portfolio-icon.png";
 
 let user    = userStore();
 let sidebar = useSidebarStore();
@@ -17,8 +18,8 @@ let sidebar = useSidebarStore();
 	>
       <v-list-item
         class="list-title-user py-5"
-        prepend-icon="mdi-account"
-        title="Portfólio"
+		:prepend-avatar="portfolio_icon"
+		title="André dos Santos"
 		slim
         nav
       ></v-list-item>

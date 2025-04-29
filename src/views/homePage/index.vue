@@ -1,6 +1,6 @@
 <script setup>
 import ProjectsPreview from "@/components/projectsPreview/ProjectsPreview.vue";
-import AboutMe from "@/views/homePage/AboutMe.vue";
+import AboutMe from "@/views/homePage/Introduction.vue";
 import ToolsUsaded from "@/views/homePage/Contact.vue";
 
 </script>

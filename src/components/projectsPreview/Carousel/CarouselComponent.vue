@@ -13,6 +13,10 @@ const carouselConfig = {
 	transition: 500,
 	gap: 1
 }
+
+const openWindowProject = (url)=>{
+	window.open(url, '_blank')
+}
 </script>
 
 <template>
@@ -34,11 +38,18 @@ const carouselConfig = {
 						<v-card-text>{{ item.description }}</v-card-text>
 						<v-card-actions>
 							<v-btn
+								v-if="!item.href"
 								color="success"
 								variant="outlined"
 								:to="item.link"
 								:disabled="item.link === '/'"
 								style=""
+							>Ver Projeto</v-btn>
+							<v-btn
+								v-if="item.href"
+								color="success"
+								variant="outlined"
+								@click.stop="openWindowProject(item.href)"
 							>Ver Projeto</v-btn>
 						</v-card-actions>
 					</div>

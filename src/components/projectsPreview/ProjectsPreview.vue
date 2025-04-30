@@ -1,5 +1,6 @@
 <script setup>
 import previewMenu from "@/assets/previewImages/PreviewMenuRestaurant.png";
+import previewPet from '@/assets/previewImages/PreviewMissaoMeuPet.png';
 import ComingSoonGreen from "@/assets/previewImages/ComingSoonGreen.jpg";
 import {RouterLink} from "vue-router";
 import {useDisplay} from "vuetify/framework";
@@ -17,10 +18,11 @@ const jsonProjects = [
 	},
 	{
 		id: 2,
-		title: "Projeto em Desenvolvimento 1",
-		src: ComingSoonGreen,
-		description: "Lorem ipsum dolor sit amet, consectetur adipisicing.",
-		link: '/'
+		title: "Missao Meu Pet",
+		src: previewPet,
+		description: "Atividade acadêmica com intuito de auxiliar o resgate de pets durante e após enchente no RS em 2024.",
+		link: '',
+		href: 'https://missao-pet.vercel.app/'
 	},
 	{
 		id: 3,

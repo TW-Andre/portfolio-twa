@@ -22,12 +22,12 @@ const aboutMeContent = {
 	// Estou cursando Análise e Desenvolvimento de Sistemas há 2 anos, pela Universidade do Vale do Rio dos Sinos (UNISINOS).
 	professionalExperience: [
 		{
-			company: "Geoblue - Soluções Ambientais",
+			company: "Projeto para: Geoblue - Soluções Ambientais",
 			role: "Desenvolvedor Front-End - Vue.js",
 			period: "2024 - Presente"
 		},
 		{
-			company: "Prodata - Gestão de Empresas",
+			company: "Projeto para: Prodata - Gestão de Empresas",
 			role: "Desenvolvedor Front-End - Vue.js",
 			period: "2024"
 		}
@@ -38,7 +38,6 @@ const aboutMeContent = {
 		course: 'Análise e Desenvolvimento de Sistemas',
 	},
 	skills: [
-		"Vue.js",
 		"Interface de usuário responsiva",
 		"Gerenciamento de estado com Pinia",
 		"Roteamento com Vue Router",
@@ -54,7 +53,7 @@ const buttonActios = [
 	{
 		title: 'Currículo',
 		link: 'https://drive.google.com/file/d/1klpep1d-Ekd7UzpWb-1xdjGANYWNLy3g/view?usp=drive_link',
-		color: 'blue-grey-lighten-5',
+		color: 'black',
 		icon: 'mdi-open-in-new'
 	},
 	{
@@ -66,7 +65,7 @@ const buttonActios = [
 	{
 		title: 'Github',
 		link: 'https://github.com/TW-Andre',
-		color: 'indigo-darken-4',
+		color: 'blue-darken-4',
 		icon: 'mdi-github'
 	},
 ];
@@ -81,20 +80,29 @@ const openWindow = (url)=>{
 	<v-card class="mt-3 px-lg-15 px-3" flat>
 		<v-breadcrumbs :items="breadcrumb"></v-breadcrumbs>
 		
-		<div class="d-flex align-center">
+		<div class="d-block d-sm-flex align-center justify-center justify-sm-start">
 			<v-card-title class="text-start text-h5">
 				{{ aboutMeContent.title }}
 			</v-card-title>
 			
-			<v-btn-group v-for="(item, index) in buttonActios">
-				<v-btn
-					variant="elevated"
-					:class="index === 1 ? 'mx-3' : ''"
-					:color="item.color"
-					:prepend-icon="item.icon"
-					:text="item.title"
-					@click="openWindow(item.link)"
-				></v-btn>
+			<v-btn-group
+				v-for="(item, index) in buttonActios"
+			>
+				
+				<v-hover class="d-flex">
+					<template v-slot:default="{isHovering, props}">
+						<v-btn
+							:variant="!isHovering ? 'flat' : 'outlined'"
+							v-bind="props"
+							class="border-none text-subtitle-2 text-sm-subtitle-1"
+							:class="[index === 1 ? 'mx-3' : '']"
+							:color="item.color"
+							:prepend-icon="item.icon"
+							:text="item.title"
+							@click="openWindow(item.link)"
+						></v-btn>
+					</template>
+				</v-hover>
 			</v-btn-group>
 			<a class="" download=""></a>
 		</div>

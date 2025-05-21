@@ -51,7 +51,7 @@ const submitLogin = async () => {
 								></v-text-field>
 							</v-col>
 							
-							<v-col cols="12" class="text-center pa-0 pb-4">
+							<v-col cols="12" class="text-center mt-3 pa-0 pb-4">
 								<v-btn
 								class="w-100"
 								type="submit"

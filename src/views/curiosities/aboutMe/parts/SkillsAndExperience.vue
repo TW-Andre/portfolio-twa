@@ -1,20 +1,27 @@
 <script setup>
+import vueIcon from '@/assets/aboutMe/vue-icon.png';
 import jsIcon from '@/assets/aboutMe/js.png';
 import gitIcon from '@/assets/aboutMe/git.png';
 import htmlIcon from '@/assets/aboutMe/html.png';
 import cssIcon from '@/assets/aboutMe/css-3.png';
 import bitIcon from '@/assets/aboutMe/bitbucket.png';
 import npmIcon from '@/assets/aboutMe/programing.png';
+import nodeIcon from '@/assets/aboutMe/node-js.png';
+import bootstrapIcon from '@/assets/aboutMe/bootstrap-icon.png';
 
 let { aboutMeContent } = defineProps(['aboutMeContent'])
 
 const iconArray = [
-	{id: 1, title: 'JavaScript', icon: jsIcon},
-	{id: 2, title: 'HTML5', icon: htmlIcon},
-	{id: 3, title: 'CSS3', icon: cssIcon},
-	{id: 4, title: 'Git', icon: gitIcon},
-	{id: 5, title: 'Bitbucket', icon: bitIcon},
-	{id: 6, title: 'Npm', icon: npmIcon},
+	{id: 1, title: 'Vue.Js', icon: vueIcon},
+	{id: 2, title: 'Vuetify', icon: '$vuetify'},
+	{id: 3, title: 'JavaScript', icon: jsIcon},
+	{id: 4, title: 'HTML5', icon: htmlIcon},
+	{id: 5, title: 'CSS3', icon: cssIcon},
+	{id: 6, title: 'Git', icon: gitIcon},
+	{id: 7, title: 'Bitbucket', icon: bitIcon},
+	{id: 8, title: 'Npm', icon: npmIcon},
+	{id: 9, title: 'Node.Js', icon: nodeIcon},
+	{id: 10, title: 'Bootstrap', icon: bootstrapIcon},
 	]
 </script>
 
@@ -85,8 +92,8 @@ const iconArray = [
 	</v-container>
 	-->
 	
-	<v-card class="pa-4 mb-2" variant="outlined">
-		<v-card-title class="text-h6 font-weight-bold mb-2">Experiência Profissional</v-card-title>
+	<v-card class="border-thin pa-4 mb-2" variant="outlined">
+		<v-card-title class="mb-2 px-1">Experiência Profissional</v-card-title>
 		<v-card-text>
 			<v-list>
 				<v-list-item
@@ -111,19 +118,19 @@ const iconArray = [
 		</v-card-text>
 	</v-card>
 	
-	<v-card class="pa-4 mb-2" variant="outlined">
-		<v-card-title class="text-h6 font-weight-bold mb-2">Formação Acadêmica</v-card-title>
+	<v-card class="border-thin pa-4 mb-2" variant="outlined">
+		<v-card-title class="mb-2 px-1">Formação Acadêmica</v-card-title>
 		<v-card class="pa-0 ma-0" flat>
 			
-			<v-card-item prepend-icon="mdi-circle-medium">
-				<v-card-title>
+			<v-card-item class="px-0 px-sm-4" prepend-icon="mdi-circle-medium">
+				<v-card-text class="font-weight-bold text-h6 pa-0">
 					{{ aboutMeContent.lifeAcademic.course }} | {{ aboutMeContent.lifeAcademic.university }} - {{ aboutMeContent.lifeAcademic.time }}
 					<span class="font-weight-light font-italic">(Cursando)</span>
-				</v-card-title>
+				</v-card-text>
 				
 			</v-card-item>
 			
-			<p class="ms-15">
+			<p class="px-3 ms-sm-15">
 				Curso de graduação em <span class="font-weight-bold"> {{ aboutMeContent.lifeAcademic.course }}</span> pela
 				<span class="font-weight-bold">{{ aboutMeContent.lifeAcademic.university }},</span>
 				pelo período de {{ aboutMeContent.lifeAcademic.time }}.
@@ -132,11 +139,11 @@ const iconArray = [
 		</v-card>
 	</v-card>
 	
-	<v-card class="pa-4" variant="outlined">
+	<v-card class="border-thin pa-4" variant="outlined">
 		
 		<v-row>
 			<v-col cols="12" lg="6">
-				<v-card-title class="text-h6 font-weight-bold mb-2">Skills</v-card-title>
+				<v-card-title class="mb-2 px-1">Skills</v-card-title>
 				<v-list>
 					<v-list-item
 						v-for="(skill, index) in aboutMeContent.skills"
@@ -155,13 +162,14 @@ const iconArray = [
 				<v-row>
 					<v-col
 						v-for="item in iconArray"
-						class="align-content-center"
+						class="align-content-center text-center"
 						cols="6"
 						md="4"
 					>
 						<v-tooltip :text="item.title" location="top">
 							<template v-slot:activator="{ props }">
-								<v-img v-bind="props" :src="item.icon" height="64"></v-img>
+								<v-img v-if="item.icon !== '$vuetify'" v-bind="props" :src="item.icon" height="64"></v-img>
+								<v-icon v-else color="info"  v-bind="props" icon="$vuetify" size="64"></v-icon>
 							</template>
 						</v-tooltip>
 						

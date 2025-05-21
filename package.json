@@ -10,6 +10,7 @@
     "backend": "json-server --watch db/db.json"
   },
   "dependencies": {
+    "@flaticon/flaticon-uicons": "^3.3.1",
     "@mdi/font": "7.4.47",
     "@tsparticles/engine": "^3.8.1",
     "@vueuse/core": "^13.0.0",

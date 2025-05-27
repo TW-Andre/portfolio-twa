@@ -8,6 +8,8 @@ import bitIcon from '@/assets/aboutMe/bitbucket.png';
 import npmIcon from '@/assets/aboutMe/programing.png';
 import nodeIcon from '@/assets/aboutMe/node-js.png';
 import bootstrapIcon from '@/assets/aboutMe/bootstrap-icon.png';
+import uiUxIcon from '@/assets/aboutMe/designer.png';
+import apiIcon from '@/assets/aboutMe/api.png';
 
 let { aboutMeContent } = defineProps(['aboutMeContent'])
 
@@ -22,6 +24,8 @@ const iconArray = [
 	{id: 8, title: 'Npm', icon: npmIcon},
 	{id: 9, title: 'Node.Js', icon: nodeIcon},
 	{id: 10, title: 'Bootstrap', icon: bootstrapIcon},
+	{id: 11, title: 'UI/UX', icon: uiUxIcon},
+	{id: 12, title: 'APIs', icon: apiIcon},
 	]
 </script>
 

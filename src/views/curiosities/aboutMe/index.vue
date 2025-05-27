@@ -52,7 +52,7 @@ const aboutMeContent = {
 const buttonActios = [
 	{
 		title: 'Currículo',
-		link: 'https://drive.google.com/file/d/1klpep1d-Ekd7UzpWb-1xdjGANYWNLy3g/view?usp=drive_link',
+		link: 'https://drive.google.com/file/d/1E7jqgkXU59lCGVXd6_ljx7BY4m1BCLGG/view?usp=drive_link',
 		color: 'black',
 		icon: 'mdi-open-in-new'
 	},

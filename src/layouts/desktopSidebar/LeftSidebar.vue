@@ -14,6 +14,7 @@ let sidebar = useSidebarStore();
 		class="border-none vertical-menu position-fixed"
 		:rail="sidebar.Rail_drawer"
 		elevation="1"
+		expand-on-hover
 	>
 		<v-list-item
 			class="list-title-user py-5"
@@ -41,6 +42,9 @@ let sidebar = useSidebarStore();
 			
 			<RouterLink to="/projetos/menurestaurante">
 				<v-list-item prepend-icon="mdi-silverware" title="Menu de Restaurante" value="restaurantmenu"></v-list-item>
+			</RouterLink>
+			<RouterLink to="/projetos/testingDB">
+				<v-list-item prepend-icon="mdi-database" title="Teste de Banco" value="testingDB"></v-list-item>
 			</RouterLink>
 			<RouterLink to="/projetos/projeto2">
 				<v-list-item prepend-icon="mdi-wrench-clock" title="Projeto 2" value="projeto2"></v-list-item>

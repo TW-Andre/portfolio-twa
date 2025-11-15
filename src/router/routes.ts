@@ -36,6 +36,12 @@ const projetos = [
     meta: { title: 'Menu de Restaurante', requiresAuth: true, layout: Default }
   },
   {
+    path: '/projetos/testingdb',
+    name: 'TestingDB',
+    component: () => import("@/views/projects/testingDB/index.vue"),
+    meta: { title: 'Testing Database', requiresAuth: true, layout: Default }
+  },
+  {
     path: '/projetos/projeto2',
     name: 'Projeto 2',
     component: () => import("@/views/projects/projeto2/index.vue"),

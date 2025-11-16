@@ -41,7 +41,7 @@ const fetchItems = async () => {
 		
 		const response = await UserService.getAll();
 		
-		table.value.items = response;
+		table.value.items = response.data;
 		
 	} catch (error) {
 		console.log(error);
@@ -95,7 +95,7 @@ const dialogShow = (id = null) => {
 			</v-btn>
 		</v-card-text>
 		
-		<v-card flat>
+		<v-card flat border class="mb-3">
 			<v-container fluid class="bg-gradient-primary">
 				
 				<v-data-table-virtual
@@ -122,11 +122,11 @@ const dialogShow = (id = null) => {
 								/>
 							</template>
 							<v-list>
-								<v-list-item class="my-n1" @click="dialogShow(item.id)">
+								<v-list-item class="my-n1" @click="dialogShow(item.id)" disabled>
 									<v-list-item class="pa-0"><i class="mdi mdi-account-edit"></i> Editar</v-list-item>
 								</v-list-item>
 								
-								<v-list-item class="my-n1" @click="dialogShow(item.id)">
+								<v-list-item class="my-n1" @click="dialogShow(item.id)" disabled>
 									<v-list-item class="pa-0"><i class="mdi mdi-close"></i> Deletar</v-list-item>
 								</v-list-item>
 							</v-list>
@@ -136,6 +136,33 @@ const dialogShow = (id = null) => {
 				</v-data-table-virtual>
 			</v-container>
 		</v-card>
+		
+		<v-card flat class="px-3">
+			<v-card-title class="text-h5 mb-3 pa-0">
+				Explicação:
+			</v-card-title>
+			
+			<v-card-text class="text-subtitle-1 pa-0">
+				<ul class="ml-4 mb-2" style="line-height: 1.6;">
+					<li>
+						<strong>Como os dados aparecem:</strong> A tabela mostra informações reais, vindas de um banco de dados na nuvem.
+					</li>
+					<li>
+						<strong>O papel da API:</strong> Um código em PHP (no servidor) funciona como ponte: o site pede os dados, o PHP busca no banco e devolve tudo organizado.
+					</li>
+					<li>
+						<strong>A tabela:</strong> É um componente moderno do Vuetify que carrega todos os usuários de uma vez, sem precisar de botões de "próxima página".
+					</li>
+					<li>
+						<strong>Adicionar:</strong> Ao clicar em “Novo Usuário”, abre uma janela. Você preenche os dados, clica em salvar...
+					</li>
+					<li>
+						<strong>Magia do resultado:</strong> ...e pronto! A tabela se atualiza <strong>sozinha</strong>, sem recarregar a página inteira — tudo acontece em tempo real.
+					</li>
+				</ul>
+			</v-card-text>
+		</v-card>
+		
 	</v-card>
 	
 	<!-- Footer fixo -->

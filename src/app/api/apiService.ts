@@ -4,8 +4,8 @@ import api from "@/app/api/configurations.ts";
 
 export const UserService = {
 	async getAll() {
-		const response = await api.get('/api.php?action=users')
-		return response.data
+		return await api.get('/api.php?action=users')
+		// return response
 	},
 
 	async createUser(user: { name: string; role: string; age: number }) {

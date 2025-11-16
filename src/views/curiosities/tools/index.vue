@@ -16,7 +16,7 @@ const breadcrumb = [
 </script>
 
 <template>
-	<v-card class="mt-3 px-lg-15 px-3" flat>
+	<v-card class="mt-3 px-lg-10 px-3" flat>
 		
 		<v-breadcrumbs :items="breadcrumb"></v-breadcrumbs>
 		<v-card-title class="text-start">

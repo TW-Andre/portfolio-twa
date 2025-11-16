@@ -1,4 +1,3 @@
-// src/api/services/userService.ts
 
 import { apiRoutes } from '@/app/api/apiRoutes.ts'
 import api from "@/app/api/configurations.ts";
@@ -9,16 +8,16 @@ export const UserService = {
 		return response.data
 	},
 
-	async getById(id: string) {
-		const url = buildUrl(apiRoutes.users.management.update, { id })
-		const response = await api.get(url)
-		return response.data
+	async createUser(user: { name: string; role: string; age: number }) {
+		const response = await api.post('/api.php?action=create_user', user)
+		return response.data[0]
 	},
 
-	async create(data: any) {
-		const response = await api.post(apiRoutes.users.management.save, data)
-		return response.data
-	},
+	/*async getById(id: string) {
+		const url = buildUrl(apiRoutes.users.management.update, { id })
+		const response = await api.get(url)
+		return response.data[0]
+	},*/
 
 	async update(id: string, data: any) {
 		const url = buildUrl(apiRoutes.users.management.update, { id })

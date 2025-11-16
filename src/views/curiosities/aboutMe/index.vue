@@ -42,7 +42,7 @@ const aboutMeContent = {
 		"Gerenciamento de estado com Pinia",
 		"Roteamento com Vue Router",
 		"Implementação de autenticação e autorização",
-		"Consumo de API's",
+		"Consumo de APIs RESTful",
 		"Versionamento de código com Git",
 		"Trabalho em equipe com metodologias ágeis",
 		"Proatividade e autonomia"
@@ -77,7 +77,7 @@ const openWindow = (url)=>{
 </script>
 
 <template>
-	<v-card class="mt-3 px-lg-15 px-3" flat>
+	<v-card class="mt-3 px-lg-10 px-3" flat>
 		<v-breadcrumbs :items="breadcrumb"></v-breadcrumbs>
 		
 		<div class="d-block d-sm-flex align-center justify-center justify-sm-start">

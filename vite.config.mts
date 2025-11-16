@@ -15,7 +15,7 @@ import { fileURLToPath, URL } from 'node:url'
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
 
-  const API_URL = `${env.VITE_BASE_URL ?? 'http://localhost/api.php'}`;
+  const API_URL = `${env.VITE_BASE_URL ?? ''}`;
   const PORT = `${env.VITE_PORT ?? '4000'}`;
   return {
 

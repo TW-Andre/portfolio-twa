@@ -4,6 +4,7 @@ import {ref} from "vue";
 import {toast} from "vue-sonner";
 import {UserService} from "@/app/api/apiService.ts";
 import { vMaska } from "maska/vue"
+import Swal from "sweetalert2";
 
 const props = defineProps({
 	dialog: {
@@ -41,11 +42,22 @@ const saveUser = async () => {
 	
 	try {
 		
-		if (!user.value.name || !user.value.role || !user.value.age) return
+		if (!user.value.name || !user.value.role || !user.value.age) {
+			await Swal.fire({
+				title: 'Todos os Campos Precisam ser Preenchidos!',
+				text: `Campos vazios: ${!user.value.name ? 'Nome; ' : ''}${!user.value.age ? 'Idade; ' : ''}${!user.value.role ? 'Ocupação.' : ''}`,
+				icon: 'warning',
+				showCancelButton: false,
+			}).then(() => {
+			
+			});
+			return
+		}
 		
 		let response =
 			props.dialog.id ? await UserService.update(props.dialog.id, user.value) : await UserService.createUser(user.value);
 		
+		console.log(response);
 		user.value.name = '';
 		user.value.role = '';
 		user.value.age  = null;
@@ -67,7 +79,6 @@ onMounted(() => {
 		age: props.dialog?.id ? props.dialog.item.age : null,
 		role: props.dialog?.id ? props.dialog.item.role : ''
 	};
-	console.log(user.value)
 })
 </script>
 <template>

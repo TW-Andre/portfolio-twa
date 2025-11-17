@@ -26,6 +26,7 @@ export default createVuetify({
           warning: '#FB8C00',
           background: '#FAFAFA',
           surface: '#FFFFFF',
+          cancel: '#717171'
         }
       },
       dark: {

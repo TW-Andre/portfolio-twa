@@ -25,10 +25,12 @@
     }
   }
 }
+
 /*USER SETTINGS*/
 .sheet-user-settings {
   min-width: 360px;
 }
+
 /*PROJECTS PREVIEW*/
 .card-hover {
   overflow: hidden;
@@ -44,6 +46,7 @@
 .card-menus {
   transition: all 1s;
 }
+
 /*RESTAURANT MENU*/
 .card-menu {
   width: 100%;
@@ -54,6 +57,19 @@
   }
 }
 
+/*USER MANAGEMENT*/
+/*
+.styled-green-btn {
+  background-color: white;
+  border-color: #2fd491;
+  :hover {
+    border-color: white;
+    background-color: #2fd491;
+  }
+}
+*/
+
+/*RESPONSIVE CONFIGS*/
 @media screen and (max-width: 900px) {
   /*DEFAULT LAYOUT*/
   .main-layout-wrapper {

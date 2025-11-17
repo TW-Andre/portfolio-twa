@@ -3,13 +3,25 @@
 import {ref} from "vue";
 import {toast} from "vue-sonner";
 import {UserService} from "@/app/api/apiService.ts";
+import { vMaska } from "maska/vue"
 
 const props = defineProps({
 	dialog: {
 		type: Object,
 		default: () => ({
 			show: false,
-			id: null
+			id: null,
+			item: {
+				type: Object,
+				default: () => ({
+					name: '',
+					age: null,
+					role: '',
+					created_at: '',
+					id: null,
+					identifier: ''
+				})
+			}
 		})
 	}
 })
@@ -19,7 +31,7 @@ let isLoading = ref(false);
 
 const user = ref({
 	name: '',
-	age: null,
+	age: '',
 	role: ''
 });
 
@@ -28,21 +40,19 @@ const saveUser = async () => {
 	isLoading.value = true;
 	
 	try {
-
-		console.log(user.value)
 		
 		if (!user.value.name || !user.value.role || !user.value.age) return
 		
-		let response = await UserService.createUser(user.value);
+		let response =
+			props.dialog.id ? await UserService.update(props.dialog.id, user.value) : await UserService.createUser(user.value);
 		
-		emit('update');
-		toast.success('Usuário cadastrado com sucesso!');
 		user.value.name = '';
 		user.value.role = '';
 		user.value.age  = null;
 		props.dialog.show = false;
-		//RUNEMIT
+		emit('update');
 		
+		toast.success('Usuário cadastrado com sucesso!');
 	} catch (error) {
 		console.log(error)
 		toast.error(error.message);
@@ -50,6 +60,15 @@ const saveUser = async () => {
 		isLoading.value = false;
 	}
 }
+
+onMounted(() => {
+	user.value = {
+		name: props.dialog?.id ? props.dialog.item.name : '',
+		age: props.dialog?.id ? props.dialog.item.age : null,
+		role: props.dialog?.id ? props.dialog.item.role : ''
+	};
+	console.log(user.value)
+})
 </script>
 <template>
 	
@@ -82,9 +101,9 @@ const saveUser = async () => {
 							color="primary"
 						/>
 						
-						<v-mask-input
+						<v-text-field
 							v-model="user.age"
-							mask="###"
+							v-maska="`###`"
 							label="Idade"
 							placeholder="Ex.: 30"
 							variant="outlined"
@@ -110,10 +129,10 @@ const saveUser = async () => {
 								<v-btn
 									@click="props.dialog.show = false"
 									variant="outlined"
-									color="secondary"
+									color="cancel"
 									size="large"
 									block
-									class="text-body-1 font-weight-medium"
+									class="w-100 text-body-1 font-weight-medium"
 								>
 									<v-icon start>mdi-close</v-icon>
 									Cancelar
@@ -125,7 +144,7 @@ const saveUser = async () => {
 									color="primary"
 									size="large"
 									variant="elevated"
-									class="text-body-1 font-weight-medium"
+									class="w-100 text-body-1 font-weight-medium"
 									:loading="isLoading"
 								>
 									<v-icon start>mdi-content-save</v-icon>

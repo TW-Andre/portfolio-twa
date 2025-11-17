@@ -4,29 +4,23 @@ import api from "@/app/api/configurations.ts";
 
 export const UserService = {
 	async getAll() {
-		return await api.get('/api.php?action=users')
-		// return response
+		return await api.get(apiRoutes.users.management.index);
 	},
 
 	async createUser(user: { name: string; role: string; age: number }) {
-		const response = await api.post('/api.php?action=create_user', user)
-		return response.data[0]
+		return await api.post(apiRoutes.users.management.save, user);
 	},
 
-	/*async getById(id: string) {
-		const url = buildUrl(apiRoutes.users.management.update, { id })
-		const response = await api.get(url)
+	/*async getById(id: number) {
+		const response = await api.get()
 		return response.data[0]
 	},*/
 
-	async update(id: string, data: any) {
-		const url = buildUrl(apiRoutes.users.management.update, { id })
-		const response = await api.put(url, data)
-		return response.data
+	async update(id: number, user: { name: string; role: string; age: number }) {
+		return await api.post(`${apiRoutes.users.management.update}${id}`, user);
 	},
 
-	async remove(id: string) {
-		const url = buildUrl(apiRoutes.users.management.delete, { id })
-		await api.delete(url)
+	async remove(id: number) {
+		return api.delete(`${apiRoutes.users.management.delete}${id}`);
 	}
 }

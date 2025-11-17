@@ -33,7 +33,7 @@ onMounted(()=>{
 		<v-menu :close-on-content-click="false">
 			<template v-slot:activator="{ props }">
 				<v-btn class="" variant="text" v-bind="props" icon>
-					<v-avatar size="35">
+					<v-avatar color="transparent" size="35">
 						<v-img :src="user_icon" />
 					</v-avatar>
 				</v-btn>

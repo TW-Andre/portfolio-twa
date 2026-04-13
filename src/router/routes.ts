@@ -47,6 +47,12 @@ const projetos = [
     component: () => import("@/views/projects/projeto2/index.vue"),
     meta: { title: 'Projeto 2', requiresAuth: true, layout: Default }
   },
+  {
+    path: '/projetos/news',
+    name: 'News',
+    component: () => import("@/views/projects/news/index.vue"),
+    meta: { title: 'Noticias', requiresAuth: true, layout: Default }
+  },
 ];
 const curiosidades = [
   {

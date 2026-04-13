@@ -1,5 +1,6 @@
 <script setup>
 import RestaurantMenu from "@/views/projects/restaurantMenu/parts/RestaurantMenu.vue"
+import FooterMenu from "@/views/projects/restaurantMenu/parts/FooterMenu.vue"
 
 const breadcrumb = [
   {
@@ -18,10 +19,14 @@ const breadcrumb = [
     <v-card class="mt-3 px-lg-10 px-3">
 
     	<v-breadcrumbs title="Home" :items="breadcrumb"></v-breadcrumbs>
-		<v-card-title class="text-start">
-			Menu de Restaurante
-		</v-card-title>
-		<RestaurantMenu />
+      
+      <v-card-title class="text-start">
+        Menu de Restaurante
+      </v-card-title>
+
+      <RestaurantMenu />
+      
+      <FooterMenu />
 
     </v-card>
 

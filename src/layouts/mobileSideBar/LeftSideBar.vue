@@ -46,6 +46,9 @@ let sidebar = useSidebarStore();
 			<RouterLink to="/projetos/projeto2">
 				<v-list-item prepend-icon="mdi-wrench-clock" title="Projeto 2" value="projeto2"></v-list-item>
 			</RouterLink>
+			<RouterLink to="/projetos/news">
+				<v-list-item prepend-icon="mdi-newspaper-variant-outline" title="Noticias" value="news"></v-list-item>
+			</RouterLink>
 			
 			<v-list-subheader
 				class="smallCap text-uppercase mt-1"

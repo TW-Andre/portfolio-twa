@@ -42,10 +42,10 @@ const projetos = [
     meta: { title: 'User Management', requiresAuth: true, layout: Default }
   },
   {
-    path: '/projetos/projeto2',
-    name: 'Projeto 2',
+    path: '/projetos/projeto3',
+    name: 'Projeto 3',
     component: () => import("@/views/projects/projeto2/index.vue"),
-    meta: { title: 'Projeto 2', requiresAuth: true, layout: Default }
+    meta: { title: 'Projeto 3', requiresAuth: true, layout: Default }
   },
   {
     path: '/projetos/news',

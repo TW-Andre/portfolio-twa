@@ -37,17 +37,17 @@ let sidebar = useSidebarStore();
 				<span class="mini-text">Projetos</span>
 			</v-list-subheader>
 			
-			<RouterLink to="/projetos/menurestaurante">
-				<v-list-item prepend-icon="mdi-silverware" title="Menu de Restaurante" value="restaurantmenu"></v-list-item>
+			<RouterLink to="/projetos/news">
+				<v-list-item prepend-icon="mdi-newspaper-variant-outline" title="Noticias" value="news"></v-list-item>
 			</RouterLink>
 			<RouterLink to="/projetos/gerenciamento-usuarios">
 				<v-list-item prepend-icon="mdi-database" title="Gerenciamento de Usuários" value="userManagement"></v-list-item>
 			</RouterLink>
-			<RouterLink to="/projetos/news">
-				<v-list-item prepend-icon="mdi-newspaper-variant-outline" title="Noticias" value="news"></v-list-item>
+			<RouterLink to="/projetos/menurestaurante">
+				<v-list-item prepend-icon="mdi-silverware" title="Menu de Restaurante" value="restaurantmenu"></v-list-item>
 			</RouterLink>
-			<RouterLink to="/projetos/projeto2">
-				<v-list-item prepend-icon="mdi-wrench-clock" title="Projeto 2" value="projeto2"></v-list-item>
+			<RouterLink to="/projetos/projeto3">
+				<v-list-item prepend-icon="mdi-wrench-clock" title="Projeto 3" value="projeto3"></v-list-item>
 			</RouterLink>
 			
 			<v-list-subheader

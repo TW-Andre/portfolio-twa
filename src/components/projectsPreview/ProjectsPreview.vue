@@ -1,6 +1,8 @@
 <script setup>
 import previewMenu from "@/assets/previewImages/PreviewMenuRestaurant.png";
 import previewPet from '@/assets/previewImages/PreviewMissaoMeuPet.png';
+import previewNews from '@/assets/previewImages/PreviewNews.png';
+import previewDBUsers from '@/assets/previewImages/PreviewDBUsers.png';
 import ComingSoonGreen from "@/assets/previewImages/ComingSoonGreen.jpg";
 import {RouterLink} from "vue-router";
 import {useDisplay} from "vuetify/framework";
@@ -26,21 +28,21 @@ const jsonProjects = [
 	},
 	{
 		id: 3,
-		title: "Projeto em Desenvolvimento 2",
-		src: ComingSoonGreen,
-		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-		link: '/'
+		title: "Notícias do Mundo",
+		src: previewNews,
+		description: "Consumo de API para buscar notícias em tempo real.",
+		link: '/projetos/news'
 	},
 	{
 		id: 4,
-		title: "Projeto em Desenvolvimento 3",
-		src: ComingSoonGreen,
-		description: "Neste projeto, será trabalhado requisição com banco de dados.",
-		link: '/'
+		title: "Gerenciamento de Usuários",
+		src: previewDBUsers,
+		description: "Listagem e cadastro de usuários em banco de dados.",
+		link: '/projetos/gerenciamento-usuarios'
 	},
 	{
 		id: 5,
-		title: "Projeto em Desenvolvimento 4",
+		title: "Projeto em Desenvolvimento 5",
 		src: ComingSoonGreen,
 		description: "Lorem ipsum dolor sit amet, consectetur elit.",
 		link: '/'

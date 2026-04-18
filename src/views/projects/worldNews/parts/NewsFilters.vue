@@ -20,13 +20,7 @@ const setGenre = (genre) => {
 <template>
   <v-card flat border class="mb-4">
     <v-card-text class="py-4">
-      <v-toolbar density="comfortable" color="transparent" class="px-0">
-        <v-toolbar-title class="text-subtitle-1 font-weight-bold">
-          Filtrar por genero
-        </v-toolbar-title>
-      </v-toolbar>
-
-      <div class="d-flex flex-wrap ga-2 mt-2">
+      <div class="d-flex flex-wrap ga-2">
         <v-chip
           v-for="genre in genres"
           :key="genre"

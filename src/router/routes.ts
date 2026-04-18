@@ -50,7 +50,7 @@ const projetos = [
   {
     path: '/projetos/news',
     name: 'News',
-    component: () => import("@/views/projects/news/index.vue"),
+    component: () => import("@/views/projects/worldNews/index.vue"),
     meta: { title: 'Noticias', requiresAuth: true, layout: Default }
   },
 ];

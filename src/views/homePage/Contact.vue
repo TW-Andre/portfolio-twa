@@ -18,7 +18,7 @@ const openSocialMedia = (item) => {
 		</v-card-title>
 		
 		<v-card-text  class="">
-			Se quiser entrar em contato ou ver o projeto, pode me chamar no LinkedIn ou acompanhar no GitHub.
+			Entre em contato ou veja mais projetos, LinkedIn ou GitHub.
 		</v-card-text>
 		
 		<v-card-text class="pa-0">

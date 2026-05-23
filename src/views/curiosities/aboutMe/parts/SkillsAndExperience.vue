@@ -10,23 +10,33 @@ import nodeIcon from '@/assets/aboutMe/node-js.png';
 import bootstrapIcon from '@/assets/aboutMe/bootstrap-icon.png';
 import uiUxIcon from '@/assets/aboutMe/designer.png';
 import apiIcon from '@/assets/aboutMe/api.png';
+import reactIcon from '@/assets/aboutMe/react-icon.svg';
+import phpIcon from '@/assets/aboutMe/php-icon.svg';
+import pythonIcon from '@/assets/aboutMe/python-icon.svg';
+import postgresqlIcon from '@/assets/aboutMe/postgresql-icon.svg';
+import tailwindIcon from '@/assets/aboutMe/tailwind-icon.svg';
 
 let { aboutMeContent } = defineProps(['aboutMeContent'])
 
 const iconArray = [
 	{id: 1, title: 'Vue.Js', icon: vueIcon},
-	{id: 2, title: 'Vuetify', icon: '$vuetify'},
-	{id: 3, title: 'JavaScript', icon: jsIcon},
-	{id: 4, title: 'HTML5', icon: htmlIcon},
-	{id: 5, title: 'CSS3', icon: cssIcon},
-	{id: 6, title: 'Git', icon: gitIcon},
-	{id: 7, title: 'Bitbucket', icon: bitIcon},
-	{id: 8, title: 'Npm', icon: npmIcon},
-	{id: 9, title: 'Node.Js', icon: nodeIcon},
-	{id: 10, title: 'Bootstrap', icon: bootstrapIcon},
-	{id: 11, title: 'UI/UX', icon: uiUxIcon},
-	{id: 12, title: 'APIs', icon: apiIcon},
-	]
+	{id: 2, title: 'React', icon: reactIcon},
+	{id: 3, title: 'UI/UX', icon: uiUxIcon},
+	{id: 4, title: 'APIs', icon: apiIcon},
+	{id: 5, title: 'PHP', icon: phpIcon},
+	{id: 6, title: 'Python', icon: pythonIcon},
+	{id: 7, title: 'PostgreSQL', icon: postgresqlIcon},
+	{id: 8, title: 'Git', icon: gitIcon},
+	{id: 9, title: 'Bitbucket', icon: bitIcon},
+	{id: 10, title: 'Npm', icon: npmIcon},
+	{id: 11, title: 'Node.Js', icon: nodeIcon},
+	{id: 12, title: 'Tailwind', icon: tailwindIcon},
+	{id: 13, title: 'Bootstrap', icon: bootstrapIcon},
+	{id: 14, title: 'Vuetify', icon: '$vuetify'},
+	{id: 15, title: 'JavaScript', icon: jsIcon},
+	{id: 16, title: 'HTML5', icon: htmlIcon},
+	{id: 17, title: 'CSS3', icon: cssIcon},
+]
 </script>
 
 <template>

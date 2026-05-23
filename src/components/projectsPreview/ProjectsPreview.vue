@@ -3,6 +3,8 @@ import previewMenu from "@/assets/previewImages/PreviewMenuRestaurant.png";
 import previewPet from '@/assets/previewImages/PreviewMissaoMeuPet.png';
 import previewNews from '@/assets/previewImages/PreviewNews.png';
 import previewDBUsers from '@/assets/previewImages/PreviewDBUsers.png';
+import previewNexus from '@/assets/previewImages/PreviewNexus.png';
+import previewDriver from '@/assets/previewImages/PreviewDriver.png';
 import ComingSoonGreen from "@/assets/previewImages/ComingSoonGreen.jpg";
 import {RouterLink} from "vue-router";
 import {useDisplay} from "vuetify/framework";
@@ -13,18 +15,17 @@ const { mobile } = useDisplay();
 const jsonProjects = [
 	{
 		id: 1,
-		title: "Menu de Restaurante",
-		src: previewMenu,
-		description: "Um simples menu, com filtro para as opções.",
-		link: '/projetos/menurestaurante'
+		title: "Motorista Particular",
+		src: previewDriver,
+		description: "Cartão de visita digital para um motorista particular, com informações de contato e serviços oferecidos.",
+		link: 'https://andreprado.vercel.app/'
 	},
 	{
 		id: 2,
-		title: "Missao Meu Pet",
-		src: previewPet,
-		description: "Atividade acadêmica com intuito de auxiliar o resgate de pets durante e após enchente no RS em 2024.",
-		link: '',
-		href: 'https://missao-pet.vercel.app/'
+		title: "Projeto Nexus",
+		src: previewNexus,
+		description: "Projeto de loja virtual, com catálogo de produtos, gerenciamento de permissões usuários / admin.",
+		link: 'https://nexus-store-mocha.vercel.app/'
 	},
 	{
 		id: 3,
@@ -42,10 +43,18 @@ const jsonProjects = [
 	},
 	{
 		id: 5,
-		title: "Projeto em Desenvolvimento 5",
-		src: ComingSoonGreen,
-		description: "Lorem ipsum dolor sit amet, consectetur elit.",
-		link: '/'
+		title: "Missao Meu Pet",
+		src: previewPet,
+		description: "Atividade acadêmica com intuito de auxiliar o resgate de pets durante e após enchente no RS em 2024.",
+		link: '',
+		href: 'https://missao-pet.vercel.app/'
+	},
+	{
+		id: 6,
+		title: "Menu de Restaurante",
+		src: previewMenu,
+		description: "Um simples menu, com filtro para as opções.",
+		link: '/projetos/menurestaurante'
 	},
 ]
 

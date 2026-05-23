@@ -171,7 +171,7 @@ const deleteUser = async (id) => {
 			<v-card-text class="text-subtitle-1 pa-0">
 				<ul class="ml-4 mb-2" style="line-height: 1.6;">
 					<li>
-						<strong>Como os dados aparecem:</strong> A tabela mostra informações reais, vindas de um banco de dados na nuvem, utilizando <span class="font-weight-bold">PostgresSQL</span>.
+						<strong>Como os dados aparecem:</strong> A tabela mostra informações reais, vindas de um banco de dados na nuvem, utilizando <span class="font-weight-bold">PostgreSQL</span>.
 					</li>
 					<li>
 						<strong>O papel da API:</strong> Um código em PHP (no servidor) funciona como ponte: o site pede os dados, o <span class="font-weight-bold">PHP</span> busca no banco e devolve tudo organizado.

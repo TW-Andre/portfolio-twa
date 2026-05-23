@@ -19,7 +19,7 @@ let sidebar = useSidebarStore();
       <v-list-item
         class="list-title-user py-5"
 		:prepend-avatar="portfolio_icon"
-		title="André dos Santos"
+		title="André Prado"
 		expand-on-hover
 		
 		slim

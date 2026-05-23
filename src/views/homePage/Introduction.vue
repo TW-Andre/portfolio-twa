@@ -5,7 +5,7 @@ let user    = userStore();
 
 const header = ref({
 	title: "Bem-vindo(a)",
-	introduction: "André dos Santos",
+	introduction: "André Prado",
 	company: "Geoblue - Soluções Ambientais",
 	briefing: "Desenvolvedor Front-End",
 	emphase: "Este é meu portfólio. Sinta-se à vontade para explorar"

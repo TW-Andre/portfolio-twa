@@ -17,7 +17,7 @@ const router = createRouter({
   routes: setupLayouts(myRoutes)
 })
 
-const title = "André dos Santos";
+const title = "André Prado";
 
 router.beforeEach((to, from, next) => {
 

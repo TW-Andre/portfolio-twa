@@ -18,14 +18,16 @@ const jsonProjects = [
 		title: "Motorista Particular",
 		src: previewDriver,
 		description: "Cartão de visita digital para um motorista particular, com informações de contato e serviços oferecidos.",
-		link: 'https://andreprado.vercel.app/'
+		link: '',
+		href: 'https://andreprado.vercel.app/'
 	},
 	{
 		id: 2,
 		title: "Projeto Nexus",
 		src: previewNexus,
 		description: "Projeto de loja virtual, com catálogo de produtos, gerenciamento de permissões usuários / admin.",
-		link: 'https://nexus-store-mocha.vercel.app/'
+		link: '',
+		href: 'https://nexus-store-mocha.vercel.app/'
 	},
 	{
 		id: 3,

@@ -49,9 +49,12 @@ let sidebar = useSidebarStore();
 			<RouterLink to="/projetos/menurestaurante">
 				<v-list-item prepend-icon="mdi-silverware" title="Menu de Restaurante" value="restaurantmenu"></v-list-item>
 			</RouterLink>
-			<RouterLink to="/projetos/projeto3">
-				<v-list-item prepend-icon="mdi-wrench-clock" title="Projeto 3" value="projeto3"></v-list-item>
-			</RouterLink>
+		<RouterLink to="/projetos/cartao-visitas">
+			<v-list-item prepend-icon="mdi-card-account-details" title="Cartão de Visitas" value="businessCard"></v-list-item>
+		</RouterLink>
+		<RouterLink to="/projetos/loja-virtual">
+			<v-list-item prepend-icon="mdi-store" title="Loja Virtual" value="virtualStore"></v-list-item>
+		</RouterLink>
 			
 			<v-list-subheader
 				class="smallCap text-uppercase mt-1"

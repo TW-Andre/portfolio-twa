@@ -11,6 +11,8 @@ declare module 'vue' {
     MenuItems: typeof import('./components/layouts/MenuItems.vue')['default']
     MobileCardsComponent: typeof import('./components/projectsPreview/MobileCards/MobileCardsComponent.vue')['default']
     Profile: typeof import('./components/account/Profile.vue')['default']
+    ProjectDetailCard: typeof import('./components/projectsPreview/ProjectDetailCard.vue')['default']
+    ProjectsGrid: typeof import('./components/projectsPreview/ProjectsGrid.vue')['default']
     ProjectsPreview: typeof import('./components/projectsPreview/ProjectsPreview.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

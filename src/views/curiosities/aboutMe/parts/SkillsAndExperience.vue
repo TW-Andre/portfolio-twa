@@ -106,7 +106,7 @@ const iconArray = [
 	</v-container>
 	-->
 	
-	<v-card class="border-thin pa-4 mb-2" variant="outlined">
+	<!-- <v-card class="border-thin pa-4 mb-2" variant="outlined">
 		<v-card-title class="mb-2 px-1">Experiência Profissional</v-card-title>
 		<v-card-text>
 			<v-list>
@@ -130,28 +130,28 @@ const iconArray = [
 				</v-list-item>
 			</v-list>
 		</v-card-text>
-	</v-card>
+	</v-card> -->
 	
-	<v-card class="border-thin pa-4 mb-2" variant="outlined">
+	<!-- <v-card class="border-thin pa-4 mb-2" variant="outlined">
 		<v-card-title class="mb-2 px-1">Formação Acadêmica</v-card-title>
 		<v-card class="pa-0 ma-0" flat>
 			
 			<v-card-item class="px-0 px-sm-4" prepend-icon="mdi-circle-medium">
 				<v-card-text class="font-weight-bold text-h6 pa-0">
-					{{ aboutMeContent.lifeAcademic.course }} | {{ aboutMeContent.lifeAcademic.university }} - {{ aboutMeContent.lifeAcademic.time }}
+					{{ aboutMeContent.academicLife.course }} | {{ aboutMeContent.academicLife.university }} - {{ aboutMeContent.academicLife.time }}
 					<span class="font-weight-light font-italic">(Cursando)</span>
 				</v-card-text>
 				
 			</v-card-item>
 			
 			<p class="px-3 ms-sm-15">
-				Curso de graduação em <span class="font-weight-bold"> {{ aboutMeContent.lifeAcademic.course }}</span> pela
-				<span class="font-weight-bold">{{ aboutMeContent.lifeAcademic.university }},</span>
-				pelo período de {{ aboutMeContent.lifeAcademic.time }}.
+				Curso de graduação em <span class="font-weight-bold"> {{ aboutMeContent.academicLife.course }}</span> pela
+				<span class="font-weight-bold">{{ aboutMeContent.academicLife.university }},</span>
+				pelo período de {{ aboutMeContent.academicLife.time }}.
 			</p>
 			
 		</v-card>
-	</v-card>
+	</v-card> -->
 	
 	<v-card class="border-thin pa-4" variant="outlined">
 		

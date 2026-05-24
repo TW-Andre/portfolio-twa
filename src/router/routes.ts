@@ -53,6 +53,18 @@ const projetos = [
     component: () => import("@/views/projects/worldNews/index.vue"),
     meta: { title: 'Noticias', requiresAuth: true, layout: Default }
   },
+  {
+    path: '/projetos/cartao-visitas',
+    name: 'BusinessCard',
+    component: () => import("@/views/projects/businessCard/index.vue"),
+    meta: { title: 'Cartão de Visitas Digital', requiresAuth: true, layout: Default }
+  },
+  {
+    path: '/projetos/loja-virtual',
+    name: 'VirtualStore',
+    component: () => import("@/views/projects/virtualStore/index.vue"),
+    meta: { title: 'Loja Virtual', requiresAuth: true, layout: Default }
+  },
 ];
 const curiosidades = [
   {

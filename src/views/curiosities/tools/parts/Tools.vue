@@ -7,7 +7,7 @@ import menu_icon from "@/assets/tools/menu-icon.svg";
 
 const toolsUsaded = [
 	{ id: 1, title: "Vue Router", src: vue_icon,
-		text: "Gerenciamento de rotas para navegação dinâmico entre páginas."
+		text: "Gerenciamento de rotas para navegação dinâmica entre páginas."
 	},
 	{ id: 2, title: "Pinia", src: pinia_icon,
 		text: "Gerenciamento de estado da aplicação de forma reativa."
@@ -15,11 +15,14 @@ const toolsUsaded = [
 	{ id: 3, title: "Segurança", src: security_icon,
 		text: "Implementação de autenticação e autorização de usuários."
 	},
-	{ id: 4, title: "Dispositivos", src: devices_icon,
-		text: "Design adaptável para diferentes tamanhos de tela."
+	{ id: 4, title: "Supabase", src: devices_icon,
+		text: "Uso de banco de dados para armazenar dados de usuários e persistir estado com segurança."
 	},
-	{ id: 5, title: "Menu de Navegação", src: menu_icon,
-		text: "Interface para navegação fácil entre seções do site."
+	{ id: 5, title: "PHP", src: menu_icon,
+		text: "Consumo e consulta de APIs para Gerenciamento de Usuários e Notícias do Mundo."
+	},
+	{ id: 6, title: "Design Responsivo", src: devices_icon,
+		text: "Interface adaptável para diferentes tamanhos de tela."
 	}
 ];
 </script>
@@ -35,7 +38,7 @@ const toolsUsaded = [
 					Explore as curiosidades e descubra mais sobre como cada elemento contribui para a funcionalidade da aplicação!
 				</v-card-text>
 				<v-card-text class="font-italic font-weight-black">
-					O sistema de login e segurança ainda não estão utilizando o banco de dados, apenas gerenciador de estados. Logo será implementado com o DB.
+			O projeto também usa banco de dados (Supabase) e PHP para consultas de APIs: Gerenciamento de Usuários e Notícias do Mundo.
 				</v-card-text>
 			</v-col>
 			

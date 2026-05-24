@@ -70,6 +70,7 @@ const deleteUser = async (id) => {
 				const response = UserService.remove(id);
 				console.log(response)
 				toast.success('Usuário Deletado!')
+				fetchItems();
 			}
 		});
 		await fetchItems();

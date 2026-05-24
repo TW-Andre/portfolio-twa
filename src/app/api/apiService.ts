@@ -17,7 +17,7 @@ export const UserService = {
 	},*/
 
 	async update(id: number, user: { name: string; role: string; age: number }) {
-		return await api.post(`${apiRoutes.users.management.update}${id}`, user);
+		return await api.put(`${apiRoutes.users.management.update}${id}`, user);
 	},
 
 	async remove(id: number) {

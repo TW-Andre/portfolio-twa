@@ -13,56 +13,48 @@ const breadcrumb = [
 ];
 
 const virtualStoreData = {
-  title: 'Loja Virtual - Plataforma E-commerce',
-  description: 'Uma plataforma de e-commerce desenvolvida em React onde o catálogo fica público e disponível mesmo para visitantes. Apenas usuários cadastrados podem comprar ou anunciar produtos, enquanto visitantes podem navegar nos itens carregados do banco de dados.',
+  title: 'Loja Virtual - Marketplace de Segunda Mão',
+  description: 'Loja Virtual é um marketplace de segunda mão para produtos de tecnologia, com autenticação, aprovação de anúncios, transações de compra/venda, painel administrativo e suporte PWA.',
   period: '2026',
   status: 'Projeto Educacional',
   statusColor: 'success',
-  type: 'Full-Stack / Fictício',
+  type: 'Full-Stack / Marketplace',
   complexity: 5,
-  link: 'https://nexus-store-mocha.vercel.app/', // Adicione o link real quando estiver disponível
-  github: 'https://github.com/TW-Andre/Nexus-Store', // Adicione o GitHub quando disponível
+  link: 'https://loja-virtual.pages.dev/',
+  github: 'https://github.com/TW-Andre/Nexus-Store',
   technologies: [
     'React',
     'TypeScript',
-    'State Management',
-    'React Router',
-    'Tailwind CSS / Bootstrap',
-    'API REST',
-    'Autenticação',
-    'Database Design'
+    'Supabase',
+    'Zod',
+    'Vite',
+    'PWA',
+    'React Query',
+    'React Hook Form'
   ],
   features: [
-    'Catálogo público carregado a partir do banco de dados',
-    'Visitantes podem ver produtos sem precisar se cadastrar',
-    'Somente usuários cadastrados podem comprar ou anunciar produtos',
-    'Autenticação de login com email e senha',
-    'Validação de credenciais contra banco de dados',
-    'Carrinho de compras funcional para usuários autenticados',
-    'Sistema de checkout e pedidos',
-    'Painel Admin com dashboard informativo',
-    'Aprovação/Recusa de pedidos (Admin)',
-    'Sistema de crédito para compras',
-    'Histórico de pedidos por usuário',
-    'Anúncio de produtos apenas para usuários autenticados'
+    'Login/Signup com email e senha via Supabase Auth',
+    'Marketplace com filtros por categoria, preço e ordenação',
+    'Criação de anúncios pendentes de aprovação admin',
+    'Sistema transacional de compra/venda com saldo',
+    'Solicitação de crédito (R$ 10 a R$ 5.000) com aprovação',
+    'Painel administrativo para aprovação de produtos e créditos',
+    'Notificações em tempo real e feedback com toasts',
+    'Aplicação PWA offline e instalável'
   ],
   challenges: [
-    'Implementação de múltiplos tipos de usuários com permissões diferentes',
-    'Design da estrutura de banco de dados para suportar complexidade',
-    'Gerenciamento de estado complexo para carrinho e pedidos',
-    'Interface intuitiva para diferentes perfis de usuário',
-    'Sistema de validação de autenticação seguro',
-    'Dashboard Admin com múltiplas visualizações de dados',
-    'Lógica de aprovação de pedidos e gerenciamento de crédito'
+    'Gerenciamento de usuários com papéis distintos e permissões',
+    'Validação de produtos e formulários com regras de negócio',
+    'Implementação de transações seguras de saldo entre usuários',
+    'Desenvolvimento de painel admin para moderação e métricas',
+    'Integração com Supabase Auth, banco de dados e RPCs'
   ],
   results: [
-    'Plataforma e-commerce totalmente funcional com todas as features principais',
-    'Sistema de autenticação seguro implementado com sucesso',
-    'Perfis distintos para visitante, usuário autenticado e admin',
-    'Painel Admin completo para gerenciamento de pedidos',
-    'Interface responsiva que funciona em desktop e mobile',
-    'Demonstração prática de conhecimentos Full-Stack',
-    'Base sólida para futuro desenvolvimento de plataforma comercial real'
+    'Marketplace de tecnologia de segunda mão funcional e moderno',
+    'Sistema completo de autenticação, anúncios e transações',
+    'Painel admin para aprovação de produtos e créditos',
+    'Interface responsiva com boa experiência mobile/desktop',
+    'Base técnica sólida para evolução do produto'
   ]
 };
 
@@ -71,17 +63,17 @@ const userTypes = [
   {
     role: 'Visitante',
     icon: 'mdi-eye-outline',
-    permissions: ['Ver catálogo público', 'Navegar produtos', 'Visualizar ofertas']
+    permissions: ['Ver catálogo público', 'Navegar produtos', 'Filtrar por categoria/preço', 'Visualizar ofertas']
   },
   {
     role: 'Usuário',
     icon: 'mdi-account',
-    permissions: ['Ver catálogo', 'Comprar produtos', 'Anunciar produtos', 'Solicitar crédito', 'Visualizar pedidos']
+    permissions: ['Comprar produtos', 'Anunciar itens', 'Solicitar crédito', 'Ver meus produtos', 'Acessar área autenticada']
   },
   {
     role: 'Admin',
     icon: 'mdi-shield-account',
-    permissions: ['Gerenciar pedidos', 'Aprovar/Recusar pedidos', 'Visualizar relatórios', 'Gerenciar créditos', 'Todas as permissões']
+    permissions: ['Aprovar/Recusar produtos', 'Aprovar/Recusar créditos', 'Gerenciar painel administrativo', 'Visualizar métricas', 'Moderação e relatórios']
   }
 ];
 </script>
@@ -126,11 +118,93 @@ const userTypes = [
       </v-card-text>
     </v-card>
 
-    <!-- Seção de mais informações -->
+    <!-- Seção de integração Supabase -->
+    <v-card class="mt-8 mb-6" variant="outlined">
+      <v-card-title class="text-subtitle-1">
+        <v-icon icon="mdi-database" size="small" class="me-2"></v-icon>
+        Integração Supabase
+      </v-card-title>
+      <v-card-text>
+        <v-list dense>
+          <v-list-item prepend-icon="mdi-check" class="px-0">
+            <v-list-item-title>Autenticação com Supabase Auth para login/signup</v-list-item-title>
+          </v-list-item>
+          <v-list-item prepend-icon="mdi-check" class="px-0">
+            <v-list-item-title>CRUD de produtos com validação de status e aprovação</v-list-item-title>
+          </v-list-item>
+          <v-list-item prepend-icon="mdi-check" class="px-0">
+            <v-list-item-title>Transferência de saldo comprador → vendedor</v-list-item-title>
+          </v-list-item>
+          <v-list-item prepend-icon="mdi-check" class="px-0">
+            <v-list-item-title>Solicitação e aprovação de créditos via fluxo admin</v-list-item-title>
+          </v-list-item>
+          <v-list-item prepend-icon="mdi-check" class="px-0">
+            <v-list-item-title>Listeners de auth e carregamento de perfil ao login</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-card-text>
+    </v-card>
+
+    <!-- Seção de validações e restrições -->
+    <v-card class="mb-6" variant="outlined">
+      <v-card-title class="text-subtitle-1">
+        <v-icon icon="mdi-shield-check" size="small" class="me-2"></v-icon>
+        Validações e Restrições
+      </v-card-title>
+      <v-card-text>
+        <v-row>
+          <v-col cols="12" md="6">
+            <v-card variant="outlined" class="mb-4 pa-4">
+              <v-card-title class="text-subtitle-2">Validações</v-card-title>
+              <v-list dense>
+                <v-list-item prepend-icon="mdi-check" class="px-0">
+                  <v-list-item-title>Título do produto: mínimo 5 caracteres</v-list-item-title>
+                </v-list-item>
+                <v-list-item prepend-icon="mdi-check" class="px-0">
+                  <v-list-item-title>Descrição: mínimo 15 caracteres</v-list-item-title>
+                </v-list-item>
+                <v-list-item prepend-icon="mdi-check" class="px-0">
+                  <v-list-item-title>Preço: valor positivo maior que zero</v-list-item-title>
+                </v-list-item>
+                <v-list-item prepend-icon="mdi-check" class="px-0">
+                  <v-list-item-title>Condição: 'new' ou 'used'</v-list-item-title>
+                </v-list-item>
+                <v-list-item prepend-icon="mdi-check" class="px-0">
+                  <v-list-item-title>Crédito: R$ 10 a R$ 5.000</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-card>
+          </v-col>
+          <v-col cols="12" md="6">
+            <v-card variant="outlined" class="mb-4 pa-4">
+              <v-card-title class="text-subtitle-2">Restrições de Negócio</v-card-title>
+              <v-list dense>
+                <v-list-item prepend-icon="mdi-alert-circle" class="px-0">
+                  <v-list-item-title>Não autenticado não acessa compras nem anúncios</v-list-item-title>
+                </v-list-item>
+                <v-list-item prepend-icon="mdi-alert-circle" class="px-0">
+                  <v-list-item-title>Usuário comum não acessa painel admin</v-list-item-title>
+                </v-list-item>
+                <v-list-item prepend-icon="mdi-alert-circle" class="px-0">
+                  <v-list-item-title>Saldo insuficiente bloqueia transação</v-list-item-title>
+                </v-list-item>
+                <v-list-item prepend-icon="mdi-alert-circle" class="px-0">
+                  <v-list-item-title>Usuário não pode comprar seu próprio produto</v-list-item-title>
+                </v-list-item>
+                <v-list-item prepend-icon="mdi-alert-circle" class="px-0">
+                  <v-list-item-title>Produtos não aprovados não aparecem na vitrine</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-card-text>
+    </v-card>
+
     <v-card class="pt-6" variant="flat" elevation="0" border>
       <v-card-text class="text-center text-body-2 text-medium-emphasis">
         <p>
-          Este projeto demonstra compreensão profunda de e-commerce, autenticação, gerenciamento de permissões e design de sistemas complexos.
+          Este projeto demonstra compreensão profunda de marketplace P2P, autenticação, gerenciamento de permissões, validação e operações transacionais em um produto moderno de segunda mão.
         </p>
       </v-card-text>
     </v-card>

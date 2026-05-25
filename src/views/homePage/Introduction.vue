@@ -7,7 +7,7 @@ const header = ref({
 	title: "Bem-vindo(a)",
 	introduction: "André Prado",
 	company: "Geoblue - Soluções Ambientais",
-	briefing: "Desenvolvedor Front-End",
+	briefing: "Desenvolvedor Full-Stack",
 	emphase: "Este é meu portfólio. Sinta-se à vontade para explorar"
 });
 

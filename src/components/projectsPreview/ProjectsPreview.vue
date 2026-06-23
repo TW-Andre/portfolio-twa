@@ -1,8 +1,7 @@
 <script setup>
-import previewMenu from "@/assets/previewImages/PreviewMenuRestaurant.png";
 import previewPet from '@/assets/previewImages/PreviewMissaoMeuPet.png';
 import previewNews from '@/assets/previewImages/PreviewNews.png';
-import previewDBUsers from '@/assets/previewImages/PreviewDBUsers.png';
+import previewGFM from '@/assets/previewImages/PreviewGFM.png';
 import previewNexus from '@/assets/previewImages/PreviewNexus.png';
 import previewDriver from '@/assets/previewImages/PreviewDriver.png';
 import ComingSoonGreen from "@/assets/previewImages/ComingSoonGreen.jpg";
@@ -31,17 +30,17 @@ const jsonProjects = [
 	},
 	{
 		id: 3,
+		title: "Gestão de Frotas e Manutenções SaaS",
+		src: previewGFM,
+		description: "Sistema de gestão de frotas e manutenções, com controle de permissões de usuários, cadastro de veículos e controle de manutenções.",
+		link: '/projetos/gfm-saas'
+	},
+	{
+		id: 4,
 		title: "Notícias do Mundo",
 		src: previewNews,
 		description: "Consumo de API para buscar notícias em tempo real.",
 		link: '/projetos/news'
-	},
-	{
-		id: 4,
-		title: "Gerenciamento de Usuários",
-		src: previewDBUsers,
-		description: "Listagem e cadastro de usuários em banco de dados.",
-		link: '/projetos/gerenciamento-usuarios'
 	},
 	{
 		id: 5,
@@ -50,13 +49,6 @@ const jsonProjects = [
 		description: "Atividade acadêmica com intuito de auxiliar o resgate de pets durante e após enchente no RS em 2024.",
 		link: '',
 		href: 'https://missao-pet.vercel.app/'
-	},
-	{
-		id: 6,
-		title: "Menu de Restaurante",
-		src: previewMenu,
-		description: "Um simples menu, com filtro para as opções.",
-		link: '/projetos/menurestaurante'
 	},
 ]
 

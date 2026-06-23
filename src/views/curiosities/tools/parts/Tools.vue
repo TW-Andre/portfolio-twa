@@ -19,7 +19,7 @@ const toolsUsaded = [
 		text: "Uso de banco de dados para armazenar dados de usuários e persistir estado com segurança."
 	},
 	{ id: 5, title: "PHP", src: menu_icon,
-		text: "Consumo e consulta de APIs para Gerenciamento de Usuários e Notícias do Mundo."
+		text: "Consumo e consulta de APIs para o projeto Notícias do Mundo."
 	},
 	{ id: 6, title: "Design Responsivo", src: devices_icon,
 		text: "Interface adaptável para diferentes tamanhos de tela."
@@ -38,7 +38,7 @@ const toolsUsaded = [
 					Explore as curiosidades e descubra mais sobre como cada elemento contribui para a funcionalidade da aplicação!
 				</v-card-text>
 				<v-card-text class="font-italic font-weight-black">
-			O projeto também usa banco de dados (Supabase) e PHP para consultas de APIs: Gerenciamento de Usuários e Notícias do Mundo.
+			O projeto também usa banco de dados (Supabase) e PHP para consultas de APIs, como no projeto Notícias do Mundo.
 				</v-card-text>
 			</v-col>
 			

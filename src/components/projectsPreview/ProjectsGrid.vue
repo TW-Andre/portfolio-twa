@@ -5,22 +5,6 @@ const router = useRouter();
 
 const projects = [
   {
-    title: 'Menu de Restaurante',
-    description: 'Sistema de menu interativo para restaurante com visualização em mobile e desktop',
-    path: '/projetos/menurestaurante',
-    technologies: ['Vue.js', 'Vuetify'],
-    icon: 'mdi-silverware-fork-knife',
-    color: 'orange'
-  },
-  {
-    title: 'Gerenciamento de Usuários',
-    description: 'CRUD completo de usuários com validação, API backend em PHP e banco de dados',
-    path: '/projetos/gerenciamento-usuarios',
-    technologies: ['Vue.js', 'PHP', 'PostgreSQL'],
-    icon: 'mdi-account-multiple',
-    color: 'blue'
-  },
-  {
     title: 'API de Notícias',
     description: 'Filtro de categorias e exibição de notícias em cards com consumo de API backend',
     path: '/projetos/news',

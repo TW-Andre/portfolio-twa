@@ -40,14 +40,11 @@ let sidebar = useSidebarStore();
 				<span class="mini-text">Projetos</span>
 			</v-list-subheader>
 			
+			<RouterLink to="/projetos/gfm-saas">
+				<v-list-item prepend-icon="mdi-car-multiple" title="GFM SaaS" value="gfmSaaS"></v-list-item>
+			</RouterLink>
 			<RouterLink to="/projetos/news">
 				<v-list-item prepend-icon="mdi-newspaper-variant-outline" title="Noticias" value="news"></v-list-item>
-			</RouterLink>
-			<RouterLink to="/projetos/gerenciamento-usuarios">
-				<v-list-item prepend-icon="mdi-database" title="Gerenciamento de Usuários" value="userManagement"></v-list-item>
-			</RouterLink>
-			<RouterLink to="/projetos/menurestaurante">
-				<v-list-item prepend-icon="mdi-silverware" title="Menu de Restaurante" value="restaurantmenu"></v-list-item>
 			</RouterLink>
 		<RouterLink to="/projetos/cartao-visitas">
 			<v-list-item prepend-icon="mdi-card-account-details" title="Cartão de Visitas" value="businessCard"></v-list-item>

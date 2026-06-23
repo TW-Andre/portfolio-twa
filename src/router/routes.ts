@@ -36,6 +36,12 @@ const projetos = [
     meta: { title: 'Menu de Restaurante', requiresAuth: true, layout: Default }
   },
   {
+    path: '/projetos/gfm-saas',
+    name: 'GFMSaaS',
+    component: () => import("@/views/projects/gfmSaaS/index.vue"),
+    meta: { title: 'GFM SaaS', requiresAuth: true, layout: Default }
+  },
+  {
     path: '/projetos/gerenciamento-usuarios',
     name: 'UserManagement',
     component: () => import("@/views/projects/userManagement/index.vue"),

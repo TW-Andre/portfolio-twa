@@ -19,7 +19,7 @@ const home = [
     path: '/',
     name: 'Home',
     component: () => import("@/views/homePage/index.vue"),
-    meta: { title: 'Home', requiresAuth: true, layout: Default }
+    meta: { title: 'Home', requiresAuth: false, layout: Default }
   },
 ].map((data) => {
   return {
@@ -33,43 +33,43 @@ const projetos = [
     path: '/projetos/menurestaurante',
     name: 'RestaurantMenu',
     component: () => import("@/views/projects/restaurantMenu/index.vue"),
-    meta: { title: 'Menu de Restaurante', requiresAuth: true, layout: Default }
+    meta: { title: 'Menu de Restaurante', requiresAuth: false, layout: Default }
   },
   {
     path: '/projetos/gfm-saas',
     name: 'GFMSaaS',
     component: () => import("@/views/projects/gfmSaaS/index.vue"),
-    meta: { title: 'GFM SaaS', requiresAuth: true, layout: Default }
+    meta: { title: 'GFM SaaS', requiresAuth: false, layout: Default }
   },
   {
     path: '/projetos/gerenciamento-usuarios',
     name: 'UserManagement',
     component: () => import("@/views/projects/userManagement/index.vue"),
-    meta: { title: 'User Management', requiresAuth: true, layout: Default }
+    meta: { title: 'User Management', requiresAuth: false, layout: Default }
   },
   {
     path: '/projetos/projeto3',
     name: 'Projeto 3',
     component: () => import("@/views/projects/projeto2/index.vue"),
-    meta: { title: 'Projeto 3', requiresAuth: true, layout: Default }
+    meta: { title: 'Projeto 3', requiresAuth: false, layout: Default }
   },
   {
     path: '/projetos/news',
     name: 'News',
     component: () => import("@/views/projects/worldNews/index.vue"),
-    meta: { title: 'Noticias', requiresAuth: true, layout: Default }
+    meta: { title: 'Noticias', requiresAuth: false, layout: Default }
   },
   {
     path: '/projetos/cartao-visitas',
     name: 'BusinessCard',
     component: () => import("@/views/projects/businessCard/index.vue"),
-    meta: { title: 'Cartão de Visitas Digital', requiresAuth: true, layout: Default }
+    meta: { title: 'Cartão de Visitas Digital', requiresAuth: false, layout: Default }
   },
   {
     path: '/projetos/loja-virtual',
     name: 'VirtualStore',
     component: () => import("@/views/projects/virtualStore/index.vue"),
-    meta: { title: 'Loja Virtual', requiresAuth: true, layout: Default }
+    meta: { title: 'Loja Virtual', requiresAuth: false, layout: Default }
   },
 ];
 const curiosidades = [
@@ -77,13 +77,13 @@ const curiosidades = [
     path: '/curiosidades/sobremim',
     name: 'AboutMe',
     component: () => import("@/views/curiosities/aboutMe/index.vue"),
-    meta: { title: 'Sobre mim', requiresAuth: true, layout: Default }
+    meta: { title: 'Sobre mim', requiresAuth: false, layout: Default }
   },
   {
     path: '/curiosidades/ferramentas',
     name: 'Curiosidades',
     component: () => import("@/views/curiosities/tools/index.vue"),
-    meta: { title: 'Ferramentas', requiresAuth: true, layout: Default }
+    meta: { title: 'Ferramentas', requiresAuth: false, layout: Default }
   },
 ];
 

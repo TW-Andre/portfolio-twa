@@ -4,6 +4,7 @@ import previewNews from '@/assets/previewImages/PreviewNews.png';
 import previewGFM from '@/assets/previewImages/PreviewGFM.png';
 import previewNexus from '@/assets/previewImages/PreviewNexus.png';
 import previewDriver from '@/assets/previewImages/PreviewDriver.png';
+import previewLawyer from '@/assets/previewImages/PreviewLawyer.png';
 import ComingSoonGreen from "@/assets/previewImages/ComingSoonGreen.jpg";
 import {RouterLink} from "vue-router";
 import {useDisplay} from "vuetify/framework";
@@ -14,6 +15,13 @@ const { mobile } = useDisplay();
 const jsonProjects = [
 	{
 		id: 1,
+		title: "Gestão de Frotas e Manutenções SaaS",
+		src: previewGFM,
+		description: "Sistema de gestão de frotas e manutenções, com controle de permissões de usuários, cadastro de veículos e controle de manutenções.",
+		link: '/projetos/gfm-saas'
+	},
+	{
+		id: 2,
 		title: "Motorista Particular",
 		src: previewDriver,
 		description: "Cartão de visita digital para um motorista particular, com informações de contato e serviços oferecidos.",
@@ -21,19 +29,12 @@ const jsonProjects = [
 		href: 'https://andreprado.vercel.app/'
 	},
 	{
-		id: 2,
+		id: 3,
 		title: "Projeto Nexus",
 		src: previewNexus,
 		description: "Projeto de loja virtual, com catálogo de produtos, gerenciamento de permissões usuários / admin.",
 		link: '',
 		href: 'https://nexus-store-mocha.vercel.app/'
-	},
-	{
-		id: 3,
-		title: "Gestão de Frotas e Manutenções SaaS",
-		src: previewGFM,
-		description: "Sistema de gestão de frotas e manutenções, com controle de permissões de usuários, cadastro de veículos e controle de manutenções.",
-		link: '/projetos/gfm-saas'
 	},
 	{
 		id: 4,
@@ -50,6 +51,14 @@ const jsonProjects = [
 		link: '',
 		href: 'https://missao-pet.vercel.app/'
 	},
+	{
+		id: 6,
+		title: "Landing Page - Advocacia",
+		src: previewLawyer,
+		description: "Landing page para exemplo de advocacia, com informações de contato e serviços oferecidos.",
+		link: '',
+		href: 'https://landing-page-example-model.pages.dev/'
+	}
 ]
 
 </script>
@@ -73,7 +82,7 @@ const jsonProjects = [
 			v-show="!mobile"
 			class="text-center mt-3 pb-0"
 		>
-			<p>Esse <span class="font-italic font-weight-bold">carrossel</span> de cards representa um <span class="font-italic font-weight-bold">preview</span> de mini-projetos desenvolvidos dentro da aplicação.</p>
+			<p>Esse <span class="font-italic font-weight-bold">carrossel</span> de cards representa um <span class="font-italic font-weight-bold">preview</span> de projetos desenvolvidos dentro e fora da aplicação.</p>
 			<p>Cada um deles explora diferentes conceitos, expondo alguns conhecimentos.</p>
 		</v-card-text>
 	</v-container>

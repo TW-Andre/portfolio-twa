@@ -26,7 +26,7 @@ const { mobile } = useDisplay();
 			</template>
 		</v-toolbar>
 		
-		<Profile />
+		<!-- <Profile /> -->
 		
 <!--		<v-card-text v-if="!mobile" class="text-end mr-auto me-5 pa-0">
 			<v-icon

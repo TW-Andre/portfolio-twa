@@ -14,7 +14,7 @@ const breadcrumb = [
 
 const gfmSaaSData = {
   title: 'Gestão de Frotas e Manutenções — SaaS',
-  description: 'Plataforma de gestão de frotas e manutenções automotivas, focada em controle de custos, status de veículos em tempo real e níveis de acesso hierárquicos. Desenvolvida com React, TypeScript e Supabase, combina arquitetura limpa no front-end com regras de negócio automatizadas no banco de dados.',
+  description: 'Uma plataforma para empresas acompanharem seus veículos, organizarem manutenções e controlarem os custos da frota. Gestores administram veículos e serviços, enquanto motoristas consultam os veículos atribuídos e seu histórico.',
   period: '2026',
   status: 'Projeto Educacional',
   statusColor: 'success',
@@ -34,15 +34,12 @@ const gfmSaaSData = {
     'React Hot Toast'
   ],
   features: [
-    'Cadastro e acompanhamento de veículos com status em tempo real',
-    'Registro de manutenções e serviços automotivos com histórico',
-    'Controle de custos e visão consolidada da frota',
-    'Autenticação e perfis de acesso via Supabase Auth',
-    'Rotas protegidas com redirecionamento por perfil logado',
-    'Filtros avançados: busca textual, status e intervalo de datas',
-    'Paginação server-side com .range() e count exato do PostgREST',
-    'Breadcrumbs dinâmicos para navegação contextual',
-    'Interface responsiva mobile-first com menu lateral adaptativo'
+    'Consultar os veículos da frota e acompanhar sua situação atual',
+    'Registrar manutenções e consultar o histórico de cada veículo',
+    'Visualizar custos e serviços realizados para apoiar a gestão da frota',
+    'Separar as permissões de gestores e motoristas conforme suas responsabilidades',
+    'Encontrar veículos e manutenções por busca, situação ou período',
+    'Usar a plataforma em celular, tablet ou computador'
   ],
   challenges: [
     'Separar lógica de dados dos componentes visuais com Service Pattern',
@@ -53,11 +50,10 @@ const gfmSaaSData = {
     'Garantir tabelas legíveis em mobile com scroll horizontal controlado'
   ],
   results: [
-    'SaaS funcional para gestão de frotas e manutenções automotivas',
-    'Arquitetura escalável com services dedicados e código testável',
-    'Segurança em camadas: UI reativa ao perfil + RLS no PostgreSQL',
-    'Performance otimizada com paginação real e buscas controladas',
-    'Experiência responsiva consistente em mobile e desktop'
+    'Gestores acompanham veículos, custos e manutenções em um só lugar',
+    'Motoristas consultam os veículos atribuídos e o histórico de serviços',
+    'Filtros ajudam a encontrar veículos e manutenções com facilidade',
+    'A plataforma se adapta ao uso em computadores, tablets e celulares'
   ]
 };
 
@@ -183,6 +179,45 @@ const uiUxItems = [
       </v-card-text>
     </v-card>
 
+    <!-- UI/UX -->
+    <v-card class="mb-6" variant="outlined">
+      <v-card-title class="text-subtitle-1">
+        <v-icon icon="mdi-palette" size="small" class="me-2"></v-icon>
+        UI/UX e Design Responsivo
+      </v-card-title>
+      <v-card-text>
+        <v-row>
+          <v-col
+            v-for="section in uiUxItems"
+            :key="section.title"
+            cols="12"
+            md="4"
+          >
+            <v-card variant="outlined" class="h-100 pa-2">
+              <v-card-text>
+                <div class="d-flex align-center mb-3">
+                  <v-icon :icon="section.icon" color="primary" class="me-2"></v-icon>
+                  <span class="text-subtitle-2 font-weight-bold">{{ section.title }}</span>
+                </div>
+                <v-list dense>
+                  <v-list-item
+                    v-for="item in section.items"
+                    :key="item"
+                    prepend-icon="mdi-check"
+                    class="px-0"
+                  >
+                    <v-list-item-title class="text-body-2">
+                      {{ item }}
+                    </v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-card-text>
+    </v-card>
+
     <!-- Arquitetura e boas práticas -->
     <v-card class="mb-6" variant="outlined">
       <v-card-title class="text-subtitle-1">
@@ -232,45 +267,6 @@ const uiUxItems = [
             </v-list-item-title>
           </v-list-item>
         </v-list>
-      </v-card-text>
-    </v-card>
-
-    <!-- UI/UX -->
-    <v-card class="mb-6" variant="outlined">
-      <v-card-title class="text-subtitle-1">
-        <v-icon icon="mdi-palette" size="small" class="me-2"></v-icon>
-        UI/UX e Design Responsivo
-      </v-card-title>
-      <v-card-text>
-        <v-row>
-          <v-col
-            v-for="section in uiUxItems"
-            :key="section.title"
-            cols="12"
-            md="4"
-          >
-            <v-card variant="outlined" class="h-100 pa-2">
-              <v-card-text>
-                <div class="d-flex align-center mb-3">
-                  <v-icon :icon="section.icon" color="primary" class="me-2"></v-icon>
-                  <span class="text-subtitle-2 font-weight-bold">{{ section.title }}</span>
-                </div>
-                <v-list dense>
-                  <v-list-item
-                    v-for="item in section.items"
-                    :key="item"
-                    prepend-icon="mdi-check"
-                    class="px-0"
-                  >
-                    <v-list-item-title class="text-body-2">
-                      {{ item }}
-                    </v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-card-text>
-            </v-card>
-          </v-col>
-        </v-row>
       </v-card-text>
     </v-card>
 

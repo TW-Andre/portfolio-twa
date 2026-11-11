@@ -43,16 +43,16 @@ const openWindow = (url) => {
       </div>
     </div>
 
-    <!-- Descrição geral -->
+   
     <v-card class="mb-6" variant="outlined">
       <v-card-text class="text-body-1">
         {{ projectData.description }}
       </v-card-text>
     </v-card>
 
-    <!-- Grid de informações -->
-    <v-row class="mb-6">
-      <!-- Período -->
+   
+    <!-- <v-row class="mb-6">
+      
       <v-col cols="12" sm="6" md="3">
         <v-card class="h-100" variant="outlined">
           <v-card-text>
@@ -66,7 +66,7 @@ const openWindow = (url) => {
         </v-card>
       </v-col>
 
-      <!-- Status -->
+      
       <v-col cols="12" sm="6" md="3">
         <v-card class="h-100" variant="outlined">
           <v-card-text>
@@ -82,7 +82,7 @@ const openWindow = (url) => {
         </v-card>
       </v-col>
 
-      <!-- Tipo de Projeto -->
+      
       <v-col cols="12" sm="6" md="3">
         <v-card class="h-100" variant="outlined">
           <v-card-text>
@@ -96,7 +96,7 @@ const openWindow = (url) => {
         </v-card>
       </v-col>
 
-      <!-- Complexidade -->
+     
       <v-col cols="12" sm="6" md="3">
         <v-card class="h-100" variant="outlined">
           <v-card-text>
@@ -112,31 +112,13 @@ const openWindow = (url) => {
           </v-card-text>
         </v-card>
       </v-col>
-    </v-row>
+    </v-row> -->
 
-    <!-- Stack Tecnológico -->
-    <v-card class="mb-6" variant="outlined">
-      <v-card-title class="text-subtitle-1">
-        <v-icon icon="mdi-code-braces" size="small" class="me-2"></v-icon>
-        Stack Tecnológico
-      </v-card-title>
-      <v-card-text>
-        <div class="d-flex flex-wrap gap-2">
-          <v-chip
-            v-for="tech in projectData.technologies"
-            :key="tech"
-            variant="outlined"
-            :text="tech"
-          ></v-chip>
-        </div>
-      </v-card-text>
-    </v-card>
-
-    <!-- Funcionalidades principais -->
+    <!-- Entregas do projeto -->
     <v-card class="mb-6" variant="outlined">
       <v-card-title class="text-subtitle-1">
         <v-icon icon="mdi-star" size="small" class="me-2"></v-icon>
-        Funcionalidades Principais
+        O que o projeto oferece
       </v-card-title>
       <v-card-text>
         <v-list>
@@ -154,30 +136,8 @@ const openWindow = (url) => {
       </v-card-text>
     </v-card>
 
-    <!-- Desafios e aprendizados -->
-    <v-card v-if="projectData.challenges" class="mb-6" variant="outlined">
-      <v-card-title class="text-subtitle-1">
-        <v-icon icon="mdi-lightbulb" size="small" class="me-2"></v-icon>
-        Desafios e Aprendizados
-      </v-card-title>
-      <v-card-text>
-        <v-list>
-          <v-list-item
-            v-for="(challenge, index) in projectData.challenges"
-            :key="index"
-            prepend-icon="mdi-arrow-right"
-            class="px-0"
-          >
-            <v-list-item-title class="text-body-2">
-              {{ challenge }}
-            </v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-card-text>
-    </v-card>
-
     <!-- Resultados -->
-    <v-card v-if="projectData.results" variant="outlined">
+    <v-card v-if="projectData.results" class="mb-6" variant="outlined">
       <v-card-title class="text-subtitle-1">
         <v-icon icon="mdi-chart-line" size="small" class="me-2"></v-icon>
         Resultados e Impacto
@@ -197,12 +157,57 @@ const openWindow = (url) => {
         </v-list>
       </v-card-text>
     </v-card>
+
+    <!-- Stack Tecnológico -->
+    <v-card v-if="projectData.technologies" class="mb-6" variant="outlined">
+      <v-card-title class="text-subtitle-1">
+        <v-icon icon="mdi-code-braces" size="small" class="me-2"></v-icon>
+        Tecnologias utilizadas
+      </v-card-title>
+      <v-card-text>
+        <div class="d-flex flex-wrap gap-2">
+          <v-chip
+            v-for="tech in projectData.technologies"
+            :key="tech"
+            variant="outlined"
+            :text="tech"
+          ></v-chip>
+        </div>
+      </v-card-text>
+    </v-card>
+
+    <!-- Desafios e aprendizados -->
+    <v-card v-if="projectData.challenges" variant="outlined">
+      <v-card-title class="text-subtitle-1">
+        <v-icon icon="mdi-lightbulb" size="small" class="me-2"></v-icon>
+        Desafios e Aprendizados
+      </v-card-title>
+      <v-card-text>
+        <v-list>
+          <v-list-item
+            v-for="(challenge, index) in projectData.challenges"
+            :key="index"
+            prepend-icon="mdi-arrow-right"
+            class="px-0"
+          >
+            <v-list-item-title class="text-body-2">
+              {{ challenge }}
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-card-text>
+    </v-card>
   </div>
 </template>
 
 <style scoped>
 .project-detail {
   animation: slideIn 0.3s ease-in-out;
+}
+
+.project-detail :deep(.v-list-item-title) {
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 @keyframes slideIn {

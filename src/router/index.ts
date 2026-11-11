@@ -6,10 +6,8 @@
 
 // Composables
 import { createRouter, createWebHistory } from 'vue-router/auto';
-import {routes} from "vue-router/auto-routes";
 import {myRoutes} from "@/router/routes";
 import {setupLayouts} from "layouts-generated";
-import {userStore} from "@/stores/authStore";
 
 
 const router = createRouter({
@@ -19,11 +17,7 @@ const router = createRouter({
 
 const title = "André Prado";
 
-router.beforeEach((to, from, next) => {
-
-  const auth = userStore();
-  const isRequiredAuth = to.meta.requiresAuth;
-
+router.beforeEach((to) => {
   const nearestWithTitle = to.matched
       .slice()
       .reverse()
@@ -32,15 +26,6 @@ router.beforeEach((to, from, next) => {
   if (nearestWithTitle) {
     document.title = nearestWithTitle.meta.title + " | " + title || title;
   }
-
-  if (!isRequiredAuth && auth.user) {
-    return { name: 'Home' };
-  } else if (isRequiredAuth && !auth.user) {
-    next({ name: 'Login' });
-  } else {
-    next();
-  }
-
 })
 
 // Workaround for https://github.com/vitejs/vite/issues/11804
